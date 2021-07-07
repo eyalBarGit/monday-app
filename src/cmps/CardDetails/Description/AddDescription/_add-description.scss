@@ -1,0 +1,26 @@
+.add-description {
+    margin-block-end: 10px;
+    .description-title-section {
+        .icon {
+            width: 15px;
+            color:$Text;
+        }
+        .description-title {
+            margin-inline-start: 10px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    textarea {
+        margin-block-end: 10px;
+        width: 100%;
+        height: 50px;
+        border: none;
+        resize: none;
+        &:active {
+            outline: none;
+        }
+    }
+  
+}

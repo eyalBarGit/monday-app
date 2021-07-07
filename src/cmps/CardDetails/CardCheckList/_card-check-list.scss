@@ -1,0 +1,63 @@
+.card-check-list {
+    .card-check-list-section {
+        padding-inline-end: 5px;
+        height: 25px;
+        .icon {
+            width: 15px;
+        }
+        .check-list-title {
+            margin-inline-start: 10px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .delete-checklist {
+            cursor: pointer;
+            font-size: 14px;
+            color: rgb(255, 4, 4);
+        }
+    }
+    .add-item {
+        margin-inline-start: 5px;
+        margin-inline-end: 5px;
+        input {
+            width: 100%;
+        }
+    }
+    .list {
+        width: 100%;
+        padding-left: 20px;
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        max-height: 100px;
+        overflow-x: auto;
+        margin-block-end: 10px;
+        button {
+          min-width: 20px;
+          height: fit-content;
+          color: rgb(124, 124, 124);
+          background: rgba(0, 0, 0, 0);
+        }
+        input {
+            height: 15px;
+        }
+        p {
+            font-size: 14px;
+            margin: 0;
+        }
+        .main-content-checkbox {
+            margin-block-end: 5px;
+
+            &:hover {
+                background-color: $Hover;
+            }
+        }
+    }
+    .add-item-btn {
+        height: 60px;
+    }
+    .check-list-action {
+        margin-inline-end: 5px;
+        margin-inline-start: 5px;
+        margin-block-end: 5px;
+    }
+}

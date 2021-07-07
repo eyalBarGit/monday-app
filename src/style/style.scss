@@ -1,0 +1,49 @@
+// BASIC HELPERS
+@import "./basics/helpers";
+@import "./setUp/typography";
+@import "./setUp/vars";
+@import "./basics/base";
+
+//NAVBAR
+
+// PAGES
+@import "../cmps/SideBar/side-bar";
+@import "../pages/MainApp/main-app";
+@import "../pages/BoardContainer/board-container";
+@import "../pages/InboxPage/inbox-page";
+
+// CMP'S
+@import "../cmps/AppHeader/app-header";
+@import "../cmps/BoardList/board-list";
+@import "../cmps/List/list";
+@import "../cmps/Kanban/kanban";
+@import "../cmps/CardList/card-list";
+@import "../cmps/MainContainer/main-container";
+@import "../cmps/AddCard/add-card";
+@import "../cmps/ListMenu/list-menu";
+@import "../cmps/ChangeListTitle/change-list-title";
+@import "../cmps/CardDetails/card-details";
+@import "../cmps/CardDetails/BlackScreen/black-screen";
+@import "../cmps/CardDetails/Description/AddDescription/add-description";
+@import "../cmps/CardDetails/Description/description";
+@import "../cmps/CardDetails/RightSideMenu/right-side-menu";
+@import "../cmps/CardDetails/CopyCard/copy-card";
+@import "../cmps/CardDetails/MoveCard/move-card";
+@import "../cmps/CardDetails/DeleteVerify/delete-verify";
+@import "../cmps/CardDetails/CardCover/card-cover";
+@import "../cmps/ListMenu/MoveList/move-list";
+@import "../cmps/AddList/add-list";
+@import "../cmps/CardDetails/CardCoverMenu/card-cover-menu";
+@import "../cmps/ColorPallette/color-pallette";
+@import "../cmps/CardDetails/CardCheckList/card-check-list";
+@import "../cmps/ProgressBar/progress-bar";
+@import "../cmps/AppHeader/AppHeaderMenu/app-header-menu";
+@import "../cmps/ActionForm/action-form";
+@import "../cmps/CardDetails/LabelsMenu/labels-menu";
+@import "../cmps/CardDetails/CardLabel/card-label";
+@import "../cmps/AppHeader/BoardsMenu/boards-menu";
+@import "../cmps/CardPreview/card-preview";
+@import "../cmps/Notifications/notifications";
+@import "../cmps/AddViewMenu/add-view-menu";
+@import "../cmps/ViewsToolbar/views-toolbar";
+@import "../cmps/BoardToolBar/board-toolbar";

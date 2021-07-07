@@ -1,0 +1,20 @@
+.add-list {
+    min-width: 240px;
+    background-color: $ListBg;
+    height: 80px;
+    padding: 5px;
+    border-radius: 3px;
+    .add-btn {
+        background-color: rgb(72, 155, 72);
+        &:hover {
+            background-color: rgb(107, 184, 107);
+        }
+    }
+    input {
+        border: none;
+        border-radius: 3px;
+        resize: none;
+        margin-bottom: 5px;
+        height: 35px;
+    }
+}

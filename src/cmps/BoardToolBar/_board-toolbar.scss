@@ -1,0 +1,45 @@
+.board-toolbar {
+    color: #d5d8df;
+    padding: 10px 0;
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+    ul li {
+        color: #d5d8df;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 3px 5px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .icon {
+            margin-inline-end: 5px;
+            font-size: 20px;
+        }
+        button {
+            background-color: unset;
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            font-size: 14px;
+            color: #d5d8df;
+            &:hover {
+                background-color: rgba(116, 116, 156, 0.555);
+            }
+        }
+        .new-deal-dropdown {
+            margin-left: 1px;
+        }
+    }
+    li.new-deal {
+        background-color: #0073ea;
+        padding: 0;
+        button {
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+}

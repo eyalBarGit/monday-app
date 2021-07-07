@@ -1,0 +1,82 @@
+{
+    "list-1": {
+        "id": "list-1",
+        "title": "Proposal",
+        "cardIds": [
+            "card-1",
+            "card-2",
+            "card-4"
+        ],
+        "bgColor": "#037F4C"
+    },
+    "list-2": {
+        "id": "list-2",
+        "title": "Lead",
+        "cardIds": [
+            "card-5",
+            "card-6",
+            "card-8"
+        ],
+        "bgColor": "#0086C0"
+    },
+    "list-3": {
+        "id": "list-3",
+        "title": "Negotiation",
+        "cardIds": [
+            "card-9",
+            "card-10"
+        ],
+        "bgColor": "#784BD1"
+    },
+    "list-4": {
+        "id": "list-4",
+        "title": "Contract Sent",
+        "cardIds": [
+            "card-11"
+        ],
+        "bgColor": "#FF7575"
+    },
+    "list-5": {
+        "id": "list-5",
+        "title": "Won",
+        "cardIds": [
+            "card-12"
+        ],
+        "bgColor": "#00C875"
+    },
+    "list-6": {
+        "id": "list-6",
+        "title": "Lost",
+        "cardIds": [
+            "card-7",
+            "card-3"
+        ],
+        "bgColor": "#E2445C"
+    },
+    "list-7": {
+        "id": "list-7",
+        "title": "Empty",
+        "cardIds": [],
+        "bgColor": "#C4C4C4"
+    },
+    "list-13": {
+        "id": "list-13",
+        "title": "todo2",
+        "cardIds": [
+            "card-16",
+            "card-26",
+            "card-36",
+            "card-46"
+        ]
+    },
+    "list-23": {
+        "id": "list-23",
+        "title": "in progress2",
+        "cardIds": [
+            "card-57",
+            "card-67",
+            "card-77",
+            "card-87"
+        ]
+    }
+}

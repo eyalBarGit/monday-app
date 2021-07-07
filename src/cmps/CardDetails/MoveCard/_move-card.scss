@@ -1,0 +1,15 @@
+.move-card {
+    margin-block-end: 7px;
+    select {
+        background-color: $Hover;
+
+        option {
+            background-color: $menuBg;
+        }
+        width: 100%;
+        border: none;
+        &:active {
+            outline: none;
+        }
+    }
+}

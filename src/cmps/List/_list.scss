@@ -1,0 +1,77 @@
+.list {
+    padding: 5px;
+    width: 260px;
+    border-radius: 5px;
+    max-height: 83vh;
+    margin: 0 15px 20px 0;
+    .title-container {
+        width: 100%;
+        span.drag-handle {
+            width: 100%;
+            height: 100%;
+        }
+        .edit-title {
+            width: 100%;
+        }
+        .list-menu-section {
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 3px;
+            &:hover {
+                background-color: $VeryLigtGray;
+            }
+            &:active {
+                transform: scale(0.905);
+            }
+        }
+        .list-title {
+            padding-inline-end: 5px;
+            padding-block-start: 5px;
+            padding-block-end: 3px;
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            color: #fff;
+        }
+        .cards-count {
+            font-size: 10px;
+            margin: 0;
+        }
+    }
+    .main-container {
+        width: 100%;
+        padding-bottom: 3px;
+        overflow-x: auto;
+    }
+    .add-deal-section {
+        width: 100%;
+        padding: 5px 0;
+        .plus-sign {
+            color: #fff;
+            font-size: 12px;
+        }
+        p {
+            width: 100%;
+            margin-inline-start: 5px;
+            font-size: 14px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+            height: 100%;
+            color: #fff;
+        }
+        .add-deal-text {
+            width: 100%;
+            padding: 0 15px;
+            &:hover {
+                cursor: pointer;
+                border-radius: 5px;
+            }
+        }
+    }
+    @media (max-width: 750px) {
+        max-height: 82vh;
+    }
+}

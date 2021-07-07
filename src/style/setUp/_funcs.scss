@@ -1,0 +1,8 @@
+@function rem($size) {
+    $remSize: $size / 16px;
+    @return ($remSize) * 1rem;
+}
+
+@function aspectRatio($h) {
+    @return ($h * 1.77777777px);
+}

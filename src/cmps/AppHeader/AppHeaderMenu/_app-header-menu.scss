@@ -1,0 +1,36 @@
+.app-header-menu {
+    position: absolute;
+    top: 34px;
+    right: 0;
+    width: 240px;
+    height: 300px;
+    border-radius: 3px;
+    background-color: $menuBg;
+    hr{
+        width: 90%;
+        color: $ListBg;
+        background-color: $ListBg;
+    }
+    .container {
+        position: relative;
+        width: 240px;
+        h3 {
+            color: $Text;
+        }
+        .menu-actions {
+            p {
+                width: 100%;
+                color: $Text;
+                line-height: 1rem;
+                margin: 0;
+                padding: 8px;
+                font-weight: 400;
+            }
+            p:hover {
+                background-color: $Hover;
+                cursor: pointer;
+                // color: $Hover;
+            }
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.list-menu {
+    width: 280px;
+    height: 300px;
+    position: absolute;
+    top: 35px;
+    left: 87%;
+    z-index: 99 !important;
+    background-color: $menuBg;
+    font-size: 14px;
+    font-weight: lighter;
+    border-radius: 3px;
+    -webkit-box-shadow: 2px 3px 6px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 3px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 3px 6px 0px rgba(0, 0, 0, 0.75);
+    .menu-main-content {
+        .title {
+            width: 95%;
+            margin-block-end: 5px;
+            border-bottom: 1px solid lightgray;
+            p {
+                text-align: center;
+                margin-block-end: 10px;
+            }
+            .close-btn {
+                position: absolute;
+                right: 15px;
+                top: 0;
+                cursor: pointer;
+                display: block;
+                &:hover {
+                    font-weight: bolder;
+                }
+            }
+        }
+        .menu-options {
+            .option {
+                height: 30px;
+                p {
+                    transition: 0.1s ease-in-out;
+                    width: 100%;
+                    padding: 0 10px;
+                    margin: 0;
+                    font-weight: 400;
+                }
+                &:hover {
+                    background-color: $Hover;
+                    cursor: pointer;
+                }
+            }
+            .delete {
+                p {
+                    color: rgb(206, 60, 60);
+                }
+            }
+        }
+    }
+    @media (max-width: 750px) {
+        left: 20%;
+        width: 200px;
+    }
+}

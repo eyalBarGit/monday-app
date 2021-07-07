@@ -1,0 +1,99 @@
+.side-bar {
+    bottom: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    .main-content-side-bar {
+        padding-top: 50px;
+        width: 60px;
+        height: 100%;
+        z-index: 2;
+        position: relative;
+        padding-left: 10px;
+        padding-right: 10px;
+        ul {
+            padding: 0;
+            .notification-item {
+                position: relative;
+            }
+        }
+        ul li {
+            font-size: 25px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 0 10px 0;
+            cursor: pointer;
+            &:hover {
+                background-color: #15181d;
+                border-radius: 5px;
+            }
+        }
+        .theme-btn {
+            width: 100%;
+        }
+    }
+    .outer-side-bar {
+        border-right: 1px solid lightgray;
+        padding-left: 15px;
+        overflow: hidden;
+        position: relative;
+        .main-content-outer-side-bar {
+            width: 1px;
+            transition: 0.3s ease-in-out !important;
+            ul{
+                padding: 0;
+            }
+            ul li {
+                font-size: 25px;
+                padding: 10px 0 10px 0;
+                cursor: pointer;
+                &:hover {
+                    background-color: #15181d;
+                    border-radius: 5px;
+                }
+            }
+        }
+        .wide {
+            width: 250px;
+        }
+    }
+    // THEMES
+    .dark-outer {
+        color: #fff;
+        background-color: #181b34;
+        border-right: 1px solid rgba(211, 211, 211, 0.438);
+    }
+    .light-outer {
+        color: #292f4c !important;
+        background-color: #d4d4d4 !important;
+    }
+    .dark-inner {
+        color: #fff;
+        background-color: #292f4c;
+    }
+    .light-inner {
+        color: #292f4c;
+        background-color: #d4d4d4;
+        border-right: 1px solid #1c253d;
+        ul li:hover {
+            color: #fff;
+        }
+    }
+    .arrow {
+        position: absolute;
+        right: 5px;
+    }
+
+    .my-dropdown-slidedown {
+        transition: 0.2s ease-in-out;
+    }
+    .hidden {
+        transition: 0.3s ease-in-out !important;
+        // visibility: hidden;
+        // position: absolute;
+        // transform: translateX(100%);
+        // z-index: -1;
+    }
+}

@@ -1,0 +1,51 @@
+.boards-menu {
+    position: relative;
+    .close-board-menu {
+        .close-btn {
+            position: absolute;
+            left: 129px;
+            top: 15px;
+            background-color: rgb(223, 115, 115) !important;
+            margin-bottom: 10px;
+            &:hover {
+                background-color: lightgray !important;
+            }
+        }
+    }
+    .main-menu-container {
+        position: absolute;
+        right: -128px;
+        top: 15px;
+        width: 200px;
+        min-height: 250px;
+        max-height: 400px;
+        overflow-y: auto;
+        background-color: $menuBg;
+        padding: 5px;
+        z-index: 100;
+        a {
+            width: 100%;
+            display: flex;
+            text-align: center;
+        }
+        .board-name {
+            width: 100% !important;
+            position: relative;
+            margin-block-end: 10px;
+            .check {
+                position: absolute;
+                right: 10px;
+                font-size: 10px;
+            }
+            p {
+                margin: 0;
+                color: $Text;
+                font-size: small;
+                width: 100%;
+                &:hover {
+                    background-color: $Hover;
+                }
+            }
+        }
+    }
+}

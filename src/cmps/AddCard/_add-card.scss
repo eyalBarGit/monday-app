@@ -1,0 +1,19 @@
+.add-card {
+    width: 100%;
+    .add-btn {
+        background-color: rgb(72, 155, 72);
+        &:hover {
+            background-color: rgb(107, 184, 107);
+        }
+    }
+    form {
+        width: 245px;
+        // padding-top: 5px;
+        input {
+            border: none;
+            border-radius: 3px;
+            margin-bottom: 5px;
+            height: 50px;
+        }
+    }
+}

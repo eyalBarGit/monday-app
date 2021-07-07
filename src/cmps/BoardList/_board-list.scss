@@ -1,0 +1,55 @@
+.board-list {
+    min-width: 550px;
+    max-width: 650px;
+    .container {
+        position: relative;
+        img {
+            width: 150px;
+            height: 100px;
+            border-radius: 5px;
+        }
+        .boards {
+            position: relative;
+        }
+        p {
+            position: absolute;
+            padding: 5px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.24);
+            width: fit-content;
+            font-weight: bolder;
+            top: 0;
+        }
+    }
+    .fav-bards {
+        width: 650px;
+        .fav-boards-container {
+            position: relative;
+        }
+    }
+    @media (max-width: 750px) {
+        min-width: 100vw;
+        padding-block-start: 10px;
+        .container {
+            margin: 5px;
+            padding: 0;
+            img {
+                width: 100px;
+                height: 70px;
+                border-radius: 5px;
+                margin: 0;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+        .fav-boards {
+            .fav-boards-container {
+                margin-inline-start: 15px;
+            }
+            h2 {
+                margin-inline-start: 10px;
+            }
+        }
+    }
+}

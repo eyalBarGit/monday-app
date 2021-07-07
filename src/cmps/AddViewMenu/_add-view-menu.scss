@@ -1,0 +1,27 @@
+.add-view-menu {
+    width: 220px;
+    height: fit-content;
+    position: absolute;
+    background-color: #292f4c;
+    border-radius: 10px;
+    top: 50px;
+    padding: 10px 10px 30px 10px;
+    color: #fff;
+    ul {
+        padding: 0;
+        li {
+            margin-block-end: 10px;
+            font-weight: 400;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+            &:hover {
+                background-color: rgba(116, 116, 156, 0.555);
+            }
+        }
+        span {
+            margin-inline-end: 10px;
+        }
+    }
+}

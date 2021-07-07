@@ -1,0 +1,37 @@
+.kanban {
+    overflow-y: hidden;
+    height: 91.2vh;
+    margin-top: -75px;
+    width: 100%;
+    padding: 70px 0 0 25px;
+    .main-content {
+        margin-top: 5px;
+        .add-list-btn {
+            min-width: 240px !important;
+            height: 35px;
+            background-color: rgba(255, 255, 255, 0.475);
+
+            &:hover {
+                background-color: $Hover;
+            }
+        }
+        .list-section {
+            position: relative;
+        }
+    }
+    .between {
+        position: relative;
+    }
+    .board-bg {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        transform: translateX(-100%);
+        transition: 0.5s ease-in-out;
+    }
+    .visible {
+        transform: translateX(0);
+    }
+    @media (max-width: 750px) {
+    }
+}

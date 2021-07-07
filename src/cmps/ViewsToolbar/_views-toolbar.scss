@@ -1,0 +1,28 @@
+.views-toolbar {
+    margin-bottom: 5px;
+    width: 100%;
+    .add-views-section {
+        position: relative;
+        .btn-add-views {
+            color: #d5d8df;
+            margin-left: 5px;
+        }
+    }
+    .view-btn {
+        color: #d5d8df;
+        font-size: 14px;
+        font-weight: 400;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        span.plus-sign {
+            font-size: 10px;
+            margin-right: 5px;
+        }
+        button {
+            color: #d5d8df;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.progress-bar {
+    height: 15px !important;
+    width: 100%;
+    border-radius: 10px;
+    margin: 5px;
+    font-size: 10px;
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 10px;
+    .wrapper{
+        height: 5px !important;
+margin-left: 3px;
+        span{
+            height: 14px !important;
+            font-size: 8px !important;
+            color: $Text;
+        }
+    }
+}

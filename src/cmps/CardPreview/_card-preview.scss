@@ -1,0 +1,15 @@
+.card-preview {
+    height: 160px;
+    background-color: #181b34;
+    margin-bottom: 10px;
+    color: #d4d8df;
+    width: 98%;
+    font-size: 14px;
+    padding: 5px;
+    -webkit-box-shadow: 0px 3px 10px -6px #000000;
+    box-shadow: 0px 3px 10px -6px #000000;
+    border-radius: 5px;
+    .deal-name {
+        margin-bottom: 5px;
+    }
+}

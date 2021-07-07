@@ -1,0 +1,81 @@
+.right-side-menu {
+    width: 165px;
+    max-height: 550px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-inline-end: 5px;
+    p {
+        font-size: 14px;
+        margin: 0;
+    }
+    span {
+        margin-inline-end: 5px;
+    }
+    input {
+        width: 100%;
+        min-height: 35px;
+    }
+    .btn-right-side {
+        width: 100%;
+        min-height: 30px;
+        padding-inline-start: 10px;
+        background-color: #e2e4e9;
+        color: $Text;
+        margin-block-end: 7px;
+        font-family: $baseFont;
+        font-weight: 400;
+        font-size: 14px;
+        text-align: left;
+        &:active {
+            transform: scale(0.98);
+        }
+        &:hover {
+            background-color: $HoverBtn;
+        }
+    }
+    .disabled {
+        color: gray !important;
+        &:hover {
+            background-color: #e2e4e9;
+            cursor: default;
+        }
+    }
+    .check-list-btns {
+        margin-block-end: 5px;
+    }
+    .watched {
+        width: 22px;
+        height: 22px;
+        background-color: #4fcc3f;
+        font-size: 15px;
+        color: #fff;
+        border-radius: 3px;
+    }
+    .cal {
+        .react-calendar__navigation__arrow {
+            display: none;
+        }
+        .react-calendar__navigation {
+            margin: 0;
+        }
+        font-size: 24px;
+        button {
+            font-size: 14px;
+            color: black;
+        }
+        .calendar {
+            margin-block-end: 7px;
+        }
+        .react-calendar__month-view__weekdays__weekday {
+            abbr {
+                font-size: 10px;
+            }
+        }
+    }
+    @media (max-width: 750px) {
+        width: 165px;
+        height: fit-content;
+        position: fixed;
+        transform: translateX(50%);
+    }
+}
