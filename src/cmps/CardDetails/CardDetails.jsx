@@ -1,36 +1,36 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleCardDetails, toggleCardWatch, setDueDate, changeCardTitle } from '../../store/actions/cardActions'
+import { toggleCardDetails, setDueDate, changeCardTitle } from '../../store/actions/cardActions'
 import { useHistory, useParams } from 'react-router-dom'
 import { BlackScreen } from '../CardDetails/BlackScreen/BlackScreen'
-import { CardCover } from './CardCover/CardCover'
-import { RightSideMenu } from './RightSideMenu/RightSideMenu'
-import { CardCheckList } from './CardCheckList/CardCheckList'
+// import { CardCover } from './CardCover/CardCover'
+// import { RightSideMenu } from './RightSideMenu/RightSideMenu'
+// import { CardCheckList } from './CardCheckList/CardCheckList'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPencilAlt, faTicketAlt, faClipboardList, faEye } from '@fortawesome/free-solid-svg-icons'
-import { Description } from './Description/Description';
-import { CardLabel } from './CardLabel/CardLabel';
+import { faPencilAlt, faTicketAlt, faEye } from '@fortawesome/free-solid-svg-icons'
+// import { Description } from './Description/Description';
+// import { CardLabel } from './CardLabel/CardLabel';
 
 export function CardDetails() {
     const state = useSelector(state => state.boardReducer)
     const cardsState = useSelector(state => state.cardReducer.cards)
-    const { boardid, cardid, listid } = useParams();
+    const { boardid, cardid, } = useParams();
     const currBoard = state.boards[boardid]
 
     const [currCard, setCurrCard] = useState()
-    const [isCoverOn, setCoverOn] = useState(false)
-    const [istCoverVisibile, setCoverVisibility] = useState(false)
-    const [isDescVisible, setDescVisibility] = useState(false)
+    // const [isCoverOn, setCoverOn] = useState(false)
+    // const [istCoverVisibile, setCoverVisibility] = useState(false)
+    // const [isDescVisible, setDescVisibility] = useState(false)
     const [newCardTitle, setCardTitle] = useState({ title: '' })
     const dispatch = useDispatch()
     const history = useHistory()
     const [isCardTitleChange, onSetCardTitle] = useState(false)
-    const currCheckList = currCard ? Object.values(currCard.checklist) : ''
+    // const currCheckList = currCard ? Object.values(currCard.checklist) : ''
     const [isMouseOver, setMouseOver] = useState(false)
-    const [cardKeys, setCardKeys] = useState()
+    // const [cardKeys, setCardKeys] = useState()
 
     const ticket = <FontAwesomeIcon icon={faTicketAlt} />
-    const clipBoard = <FontAwesomeIcon icon={faClipboardList} />
+    // const clipBoard = <FontAwesomeIcon icon={faClipboardList} />
     const eye = <FontAwesomeIcon icon={faEye} />
     const pencil = <FontAwesomeIcon icon={faPencilAlt} />
 
@@ -53,23 +53,23 @@ export function CardDetails() {
     }
 
 
-    const onToggleCover = () => {
-        setCoverOn(!isCoverOn)
-    }
+    // const onToggleCover = () => {
+    //     setCoverOn(!isCoverOn)
+    // }
 
-    const toggleCardVisibility = () => {
-        setCoverVisibility(!istCoverVisibile)
-    }
+    // const toggleCardVisibility = () => {
+    //     setCoverVisibility(!istCoverVisibile)
+    // }
 
-    const onToggleCardDesc = () => {
-        setDescVisibility(!isDescVisible)
-    }
+    // const onToggleCardDesc = () => {
+    //     setDescVisibility(!isDescVisible)
+    // }
 
 
-    const onToggleCardWatch = () => {
-        const isWatched = currCard.isWatched
-        dispatch(toggleCardWatch(currBoard, currCard, !isWatched))
-    }
+    // const onToggleCardWatch = () => {
+    //     const isWatched = currCard.isWatched
+    //     dispatch(toggleCardWatch(currBoard, currCard, !isWatched))
+    // }
 
     const onRemoveDate = () => {
         dispatch(setDueDate(currBoard, currCard, ''))
@@ -170,24 +170,24 @@ export function CardDetails() {
                                 <div>
                                     <p>Labels</p>
                                     <div className="flex">
-                                        {currCard.labels.map(label => {
+                                        {/* {currCard.labels.map(label => {
                                             return <CardLabel key={label} label={label} />
-                                        })}
+                                        })} */}
                                     </div>
                                 </div>
                             }
 
                         </section>
-                        <section className="description-section">
+                        {/* <section className="description-section">
                             <Description clipBoard={clipBoard} isDescVisible={isDescVisible} currBoard={currBoard} currCard={currCard}
                                 onToggleCardDesc={onToggleCardDesc} />
-                        </section>
+                        </section> */}
                         <section className="checkList-section">
-                            {currCheckList.length > 0 &&
+                            {/* {currCheckList.length > 0 &&
                                 currCheckList.map(checklist => <div key={checklist.id} >
                                     <CardCheckList currCheckList={checklist} currBoard={currBoard} currCard={currCard} />
                                 </div>)
-                            }
+                            } */}
                         </section>
                     </div>
                     {/* <div className="right-side">
@@ -208,7 +208,7 @@ export function CardDetails() {
             </div>
 
         </div>
-        
+
     )
 }
 

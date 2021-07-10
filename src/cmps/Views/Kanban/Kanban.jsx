@@ -1,18 +1,18 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux';
-import { List } from '../List/List'
+import { List } from '../../List/List'
 import {
     saveToStorage,
     dragList,
-    setActiveBoard,
+    // setActiveBoard,
     toggleBgSide,
-} from '../../store/actions/boardActions'
-import { dragInsideList, dragOutsideList, } from '../../store/actions/listActions'
+} from '../../../store/actions/boardActions'
+import { dragInsideList, dragOutsideList, } from '../../../store/actions/listActions'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
-import { CardDetails } from '../CardDetails/CardDetails'
-import { BlackScreen } from '../CardDetails/BlackScreen/BlackScreen'
-import { AddList } from '../AddList/AddList'
+import { CardDetails } from '../../CardDetails/CardDetails'
+import { BlackScreen } from '../../CardDetails/BlackScreen/BlackScreen'
+// import { AddList } from '../AddList/AddList'
 import { useParams } from 'react-router';
 
 export function Kanban() {
@@ -22,7 +22,7 @@ export function Kanban() {
     const listOrder = useSelector(boards => boards.boardReducer.boards[boardid].listOrder)
 
     const { isCardDetailShown, isBgSideOpen } = boards
-    const [isAddListVisible, setAddList] = useState(false)
+    // const [isAddListVisible, setAddList] = useState(false)
     const [currBoard, setCurrBoard] = useState(boards.boards[boardid])
     const dispatch = useDispatch()
     const boardRef = useRef(null)
@@ -40,18 +40,7 @@ export function Kanban() {
 
     useEffect(() => {
         loadCurrBoard()
-        
     }, [listOrder, loadCurrBoard])
-
-
-    useEffect(() => {
-        dispatch(setActiveBoard(boardid))
-        return () => {
-            dispatch(setActiveBoard(''))
-        }
-    }, [boardid, dispatch])
-
-
 
 
 
@@ -73,7 +62,7 @@ export function Kanban() {
         }
         if (type === 'list') {
             dispatch(dragList(source, destination, draggableId, currBoard))
-            return 
+            return
         }
         dispatch(dragOutsideList(start, source, destination, draggableId, currBoard, finish))
 
@@ -84,14 +73,13 @@ export function Kanban() {
         dispatch(toggleBgSide())
     }
 
-    const onToggleAddList = () => {
-        setAddList(!isAddListVisible)
-    }
+    // const onToggleAddList = () => {
+    //     setAddList(!isAddListVisible)
+    // }
 
 
 
 
-    // if (!currBoard) return '...LOADING...'
     return (
         <DragDropContext
             onDragEnd={onDragEnd}
@@ -121,9 +109,9 @@ export function Kanban() {
                                     {/* {!isAddListVisible &&
                                         <button onClick={onToggleAddList} className="add-list-btn">Add list</button>
                                     } */}
-                                    {isAddListVisible &&
+                                    {/* {isAddListVisible &&
                                         <AddList currBoard={currBoard} onToggleAddList={onToggleAddList} />
-                                    }
+                                    } */}
                                 </div>
                                 {isBgSideOpen &&
                                     <span onClick={toggleBgBoard} >

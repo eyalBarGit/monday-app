@@ -1,6 +1,6 @@
 import service from '../../service/boardService'
 import listService from '../../service/listService'
-
+import viewService from '../../service/viewService'
 
 export function addNewListId(listId, currBoard) {
     return async dispatch => {
@@ -236,10 +236,37 @@ export function toggleStorageReset() {
 
 
 
-export function addView(viewType) {
+export function addView(viewType, boardid) {
     return async dispatch => {
         try {
-            dispatch(_addView(viewType));
+            const newView = { view: viewService.createView(viewType), boardid }
+            dispatch(_addView(newView));
+        }
+        catch (err) {
+            throw err
+        }
+    }
+}
+export function deleteView(viewId, boardid) {
+    return async dispatch => {
+        const viewToDelete = {
+            viewId, boardid
+        }
+        try {
+            dispatch(_deleteView(viewToDelete));
+        }
+        catch (err) {
+            throw err
+        }
+    }
+}
+export function addToFavorites(viewId, boardid) {
+    return async dispatch => {
+        const viewToDelete = {
+            viewId, boardid
+        }
+        try {
+            dispatch(_addToFavorites(viewToDelete));
         }
         catch (err) {
             throw err
@@ -258,6 +285,20 @@ function _addView(viewType) {
     return {
         type: 'ADD_VIEW',
         data: viewType
+    }
+}
+function _deleteView(viewId) {
+    console.log('viewId', viewId)
+    return {
+        type: 'REMOVE_VIEW',
+        data: viewId
+    }
+}
+function _addToFavorites(viewId) {
+    console.log('viewId', viewId)
+    return {
+        type: 'FAVORITE_VIEW',
+        data: viewId
     }
 }
 function _disableStorageReset() {

@@ -1,26 +1,22 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FaTable } from 'react-icons/fa'
 import { AiOutlineCalendar, AiOutlinePieChart } from 'react-icons/ai'
 import { BsKanban } from 'react-icons/bs'
 import { FaWpforms } from 'react-icons/fa'
 import { useDispatch } from 'react-redux';
-import { addView } from '../../store/actions/boardActions';
+import { addView } from '../../../store/actions/boardActions';
+import { useParams } from 'react-router';
 
 
 
-export function AddViewMenu({ setViewMenu }) {
+export function AddViewMenu({ setAddViewMenu }) {
     const dispatch = useDispatch()
+    const { boardid } = useParams()
 
-    useEffect(() => {
-        // component didMount
-        return () => {
-            // component willUnMount
-        }
-    }, [])
 
     const onAddView = (viewType) => {
-        dispatch(addView(viewType))
-        setViewMenu(false)
+        dispatch(addView(viewType, boardid))
+        setAddViewMenu(false)
     }
 
     return (

@@ -5,16 +5,12 @@ function createBoard(boardName) {
     id: UTILS.generatePassword(4),
     name: boardName,
     isFav: false,
-    cards: {
-
-    },
-    lists: {
-
-    },
     listOrder: [],
     backgroundImg: 'sky',
     navBarTheme: 'bright',
-    createdAt: new Date().toLocaleDateString()
+    createdAt: new Date().toLocaleDateString(),
+    views: [{ id: 'X3SsvH4', type: 'Kanban', createdAt: new Date().toLocaleDateString() }]
+
 
   }
 

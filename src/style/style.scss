@@ -16,7 +16,7 @@
 @import "../cmps/AppHeader/app-header";
 @import "../cmps/BoardList/board-list";
 @import "../cmps/List/list";
-@import "../cmps/Kanban/kanban";
+@import "../cmps/Views/Kanban/kanban";
 @import "../cmps/CardList/card-list";
 @import "../cmps/MainContainer/main-container";
 @import "../cmps/AddCard/add-card";
@@ -44,6 +44,8 @@
 @import "../cmps/AppHeader/BoardsMenu/boards-menu";
 @import "../cmps/CardPreview/card-preview";
 @import "../cmps/Notifications/notifications";
-@import "../cmps/AddViewMenu/add-view-menu";
+@import "../cmps/ViewsToolbar/AddViewMenu/add-view-menu";
+@import "../cmps/ViewsToolbar/ViewsMenu/views-menu";
 @import "../cmps/ViewsToolbar/views-toolbar";
 @import "../cmps/BoardToolBar/board-toolbar";
+@import "../cmps/Views/Calendar/calendar-view"

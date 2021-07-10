@@ -1,6 +1,7 @@
 .views-toolbar {
     margin-bottom: 5px;
     width: 100%;
+    gap: 5px;
     .add-views-section {
         position: relative;
         .btn-add-views {
@@ -14,9 +15,43 @@
         font-weight: 400;
         border-radius: 5px;
         display: flex;
-        justify-content: center;
         align-items: center;
         cursor: pointer;
+        position: relative;
+        &:hover {
+            background-color: rgba(116, 116, 156, 0.555);
+            span.view-type {
+                overflow: hidden !important;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 40%;
+                padding: 0;
+            }
+            .hoverable-menu {
+                display: block;
+                position: absolute;
+                right: 15px;
+                padding: 0;
+                z-index: 50;
+                font-size: 20px;
+                margin: 0;
+                .dots {
+                    padding: 0;
+                    // margin-inline-start: 5px;
+                    border-radius: 5px;
+                    &:hover {
+                        background-color: rgba(0, 0, 0, 0.589);
+                    }
+                }
+            }
+        }
+        .icon {
+            font-size: 15px;
+            margin-inline-end: 5px;
+        }
+        .hoverable-menu {
+            display: none;
+        }
         span.plus-sign {
             font-size: 10px;
             margin-right: 5px;

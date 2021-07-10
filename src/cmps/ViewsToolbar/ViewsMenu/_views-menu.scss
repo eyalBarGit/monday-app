@@ -1,0 +1,31 @@
+.views-menu {
+    width: 200px;
+    height: fit-content;
+    position: absolute;
+    background-color: #30324e;
+    border-radius: 10px;
+    top: 25px;
+    padding: 0 10px 30px 10px;
+    color: #fff;
+    ul {
+        padding: 0;
+        li {
+            margin-block-end: 10px;
+            font-weight: 400;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+            &:hover {
+                background-color: rgba(116, 116, 156, 0.555);
+            }
+        }
+        span {
+            margin-inline-end: 10px;
+        }
+    }
+    .disabled {
+        pointer-events: none; //This makes it not clickable
+        opacity: 0.6; //This grays it out to look disabled
+    }
+}

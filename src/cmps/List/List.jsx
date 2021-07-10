@@ -80,8 +80,8 @@ export function List({ listId, currBoard, index, }) {
                             <span className="drag-handle flex space-between "
                                 {...provided.dragHandleProps}
                             >
-                                {!isEditTitle && <div>
-                                    <p className="list-title">{currList.title} / {currList.cardIds.length}</p>
+                                {!isEditTitle && <div className="list-title" >
+                                    <p >{currList.title} / {currList.cardIds.length}</p>
                                 </div>
                                 }
                                 {isEditTitle && <span className="edit-title">
@@ -144,7 +144,7 @@ export function List({ listId, currBoard, index, }) {
                             {isAddCardShown && <div className="add-card-section">
                                 <AddCard toggleAddCard={onToggleAddCard}
                                     currList={currList}
-                                    currBoard={currBoard} />
+                                     />
                             </div>
                             }
                             <div className="div">

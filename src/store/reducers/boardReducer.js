@@ -9,11 +9,10 @@ if (!initialState || !initialState.isInitialized) {
         isCardDetailShown: false,
         isBgSideOpen: false,
         isInitialized: true,
-        views: ['Kanban']
     };
 }
 
-export default function boardReducer (state = initialState, action) {
+export default function boardReducer(state = initialState, action) {
     switch (action.type) {
         case 'SET_STATE':
             return {
@@ -34,7 +33,6 @@ export default function boardReducer (state = initialState, action) {
 
 
         case 'ADD_NEW_LIST_ID':
-            console.log('action.data(BoardReducer):', action.data)
             return {
                 ...state,
                 boards: {
@@ -47,7 +45,6 @@ export default function boardReducer (state = initialState, action) {
             };
 
         case 'ADD_COPIED_LIST_ID':
-            console.log('action.data(BoardReducer):', action.data)
             return {
                 ...state,
                 boards: {
@@ -61,7 +58,6 @@ export default function boardReducer (state = initialState, action) {
 
 
         case 'REMOVE_LIST_ID':
-            console.log('in REmove:', action.data)
             var listOrder = state.boards[action.data.currBoard.id].listOrder
             var currIdx = listOrder.findIndex((listId) => { return listId === action.data.listId })
             listOrder.splice(currIdx, 1)
@@ -195,7 +191,29 @@ export default function boardReducer (state = initialState, action) {
             console.log('action.data:', action.data)
             return {
                 ...state,
-                views: [...state.views, action.data]
+                boards: {
+                    ...state.boards,
+                    [action.data.boardid]: {
+                        ...state.boards[action.data.boardid],
+                        views: [...state.boards[action.data.boardid].views, action.data.view]
+                    }
+                }
+            };
+        case 'REMOVE_VIEW':
+            console.log('action.', action)
+            var viewList = state.boards[action.data.boardid].views
+            var currViewIdx = viewList.findIndex((view) => { return view.id === action.data.viewId })
+            viewList.splice(currViewIdx, 1)
+            return {
+                ...state,
+                boards: {
+                    ...state.boards,
+                    [action.data.boardid]: {
+                        ...state.boards[action.data.boardid],
+                        views: [...viewList]
+                    }
+                }
+                // views: [...viewList]
             };
         case 'DISABLE_STORAGE_RESET':
             return {

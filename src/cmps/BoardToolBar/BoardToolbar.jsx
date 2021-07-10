@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+// import {  useSelector } from 'react-redux';
 import { AiOutlineSearch } from 'react-icons/ai'
 import { BiFilterAlt } from 'react-icons/bi'
 import { FiChevronDown } from 'react-icons/fi'
@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 export function BoardToolbar() {
-    const state = useSelector(state => state.state)
+    // const state = useSelector(state => state.state)
     const person = <FontAwesomeIcon icon={faUserCircle} />
 
 

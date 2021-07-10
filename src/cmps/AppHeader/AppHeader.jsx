@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { favoriteBoard, removeSavedBoard } from '../../store/actions/boardActions'
 // import { faEllipsisH } from '@fortawesome/free-solid-svg-icons'
@@ -10,13 +10,14 @@ import { AppHeaderMenu } from './AppHeaderMenu/AppHeaderMenu';
 import { BlackScreen } from '../CardDetails/BlackScreen/BlackScreen';
 import { ViewsToolbar } from '../ViewsToolbar/ViewsToolbar'
 import { BoardToolbar } from '../BoardToolBar/BoardToolbar';
+import { useParams } from 'react-router';
 
 export function AppHeader({ setView }) {
 
     const state = useSelector(state => state.boardReducer)
-    const { activeBoard } = state
-    const currBoard = state.boards[activeBoard]
-    const [navBarTheme, setTheme] = useState()
+    // const { activeBoard } = state
+    const { boardid } = useParams()
+    const currBoard = state.boards[boardid]
     const bottomNav = currBoard?.bottomNav
     const [isHeaderMenuVisible, setHeaderMenu] = useState(false)
     const [showSavedTitle, setSaved] = useState(false)
@@ -54,13 +55,13 @@ export function AppHeader({ setView }) {
 
 
 
-    useEffect(() => {
-        activeBoard ? setTheme('') : setTheme('dark')
-    }, [activeBoard])
+    // useEffect(() => {
+    //     activeBoard ? setTheme('') : setTheme('dark')
+    // }, [activeBoard])
 
 
     return (
-        <nav className={`app-header flex column ${navBarTheme}`}>
+        <nav className="app-header flex column">
             {currBoard &&
                 <div className={`top-nav flex align-center ${bottomNav}`}>
                     <h1> {currBoard.name}</h1>
@@ -76,13 +77,13 @@ export function AppHeader({ setView }) {
                             < AppHeaderMenu
                                 onRemoveSavedBoard={removeSavedBoard}
                                 currBoard={currBoard}
-                                activeBoard={activeBoard}
+                                // activeBoard={activeBoard}
                                 onToggleAppHeaderMenu={onToggleAppHeaderMenu} />
                         </div>
                     }
                 </div>
             }
-            <div className={`mid-part flex ${navBarTheme}`}>
+            <div className="mid-part flex">
                 <div className="nav-tools flex space-between align-center">
                     <div className="views-section flex align-center">
                         <ViewsToolbar setView={setView} />

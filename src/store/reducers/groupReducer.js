@@ -2,7 +2,7 @@ import UTILS from '../../service/utils'
 import groups from '../../data/groups.json'
 
 var initialState = {
-    lists: UTILS.loadFromStorage('groups') || groups
+    groups: UTILS.loadFromStorage('groups') || groups
 };
 
 
@@ -11,16 +11,16 @@ export default function groupReducer(state = initialState, action) {
         case 'UPDATE_LIST':
             return {
                 ...state,
-                lists: {
-                    ...state.lists,
+                groups: {
+                    ...state.groups,
                     [action.data.updatedList.id]: action.data.updatedList
                 }
             };
         case 'UPDATE_LISTS':
             return {
                 ...state,
-                lists: {
-                    ...state.lists,
+                groups: {
+                    ...state.groups,
                     [action.data.newStartList.id]: action.data.newStartList,
                     [action.data.newFinishList.id]: action.data.newFinishList,
                 }
@@ -29,41 +29,42 @@ export default function groupReducer(state = initialState, action) {
         case 'CREATE_LIST':
             return {
                 ...state,
-                lists: {
-                    ...state.lists,
+                groups: {
+                    ...state.groups,
                     [action.data.id]: action.data
                 }
             };
-        case 'ADD_NEW_CARD':
-            return {
-                ...state,
-                lists: {
-                    ...state.lists,
-                    [action.data.currList.id]: {
-                        ...state.lists[action.data.currList.id],
-                        cardIds: [
-                            ...state.lists[action.data.currList.id].cardIds, action.data.card.id
-                        ]
-                    }
-                }
-            };
+        // case 'ADD_NEW_CARD':
+        //     console.log('action:', action)
+        //     return {
+        //         ...state,
+        //         groups: {
+        //             ...state.groups,
+        //             [action.data.currList.id]: {
+        //                 ...state.groups[action.data.currList.id],
+        //                 cardIds: [
+        //                     ...state.groups[action.data.currList.id].cardIds, action.data.card.id
+        //                 ]
+        //             }
+        //         }
+        //     };
 
         case 'DELETE_LIST':
             console.log('action.data:', action.data)
-            var newLists = state.lists
+            var newLists = state.groups
             delete newLists[action.data.currList.id]
             return {
                 ...state,
-                lists: {
+                groups: {
                     ...newLists
                 },
             };
-         case 'COPY_LIST':
+        case 'COPY_LIST':
             console.log('action.data(LIST-REDUCER):', action.data)
             return {
                 ...state,
-                lists: {
-                    ...state.lists,
+                groups: {
+                    ...state.groups,
                     [action.data.copiedList.id]: {
                         ...action.data.copiedList
                     }
@@ -77,8 +78,8 @@ export default function groupReducer(state = initialState, action) {
         case 'CHANGE_LIST_NANE':
             return {
                 ...state,
-                lists: {
-                    ...state.lists,
+                groups: {
+                    ...state.groups,
                     [action.data.currList.id]: {
                         ...action.data.currList
                     }
