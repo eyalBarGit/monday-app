@@ -15,8 +15,8 @@ import { BlackScreen } from '../../CardDetails/BlackScreen/BlackScreen'
 // import { AddList } from '../AddList/AddList'
 import { useParams } from 'react-router';
 
-export function Kanban() {
-    const { boardid } = useParams();
+export function Kanban({boardid}) {
+    // const { boardid } = useParams();
     const boards = useSelector(boards => boards.boardReducer)
     const listsState = useSelector(state => state.listReducer.lists)
     const listOrder = useSelector(boards => boards.boardReducer.boards[boardid].listOrder)
@@ -137,3 +137,4 @@ export function Kanban() {
 const MainDndArea = styled.div`
     width: 100 %;
     `;
+

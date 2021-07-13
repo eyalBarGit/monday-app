@@ -1,6 +1,6 @@
 .notifications {
-    width: 500px;
-    height: 700px;
+    width: 580px;
+    height: 80vh;
     position: absolute;
     background-color: #181b34;
     border: 1px solid rgb(134, 134, 134);
@@ -9,4 +9,41 @@
     top: 0;
     padding: 10px;
     color: #fff;
+    .notifications-top-bar {
+        border-bottom: 1px solid rgba(211, 211, 211, 0.322);
+        ul li {
+            width: fit-content;
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            transition: 0.4 ease-in-out;
+            position: relative;
+
+            &::after {
+                background-color: none repeat scroll 0 0 transparent;
+                bottom: 0;
+                content: "";
+                display: block;
+                height: 2px;
+                left: 50%;
+                position: absolute;
+                background: #0073ea;
+                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                width: 0;
+            }
+            &:hover::after {
+                width: 100%;
+                left: 0;
+            }
+            &:hover {
+                background-color: unset;
+            }
+            p {
+                padding: 0 15px;
+                color: #d5d8df;
+                font-size: 16px;
+                font-weight: 300;
+            }
+        }
+    }
 }

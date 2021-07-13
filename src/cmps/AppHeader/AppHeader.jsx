@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { favoriteBoard, removeSavedBoard } from '../../store/actions/boardActions'
 // import { faEllipsisH } from '@fortawesome/free-solid-svg-icons'
@@ -53,11 +53,12 @@ export function AppHeader({ setView }) {
         setHeaderMenu(!isHeaderMenuVisible)
     }
 
+    useEffect(() => {
+        console.log('boardid:', boardid)
 
 
-    // useEffect(() => {
-    //     activeBoard ? setTheme('') : setTheme('dark')
-    // }, [activeBoard])
+    }, [])
+
 
 
     return (
@@ -86,7 +87,7 @@ export function AppHeader({ setView }) {
             <div className="mid-part flex">
                 <div className="nav-tools flex space-between align-center">
                     <div className="views-section flex align-center">
-                        <ViewsToolbar setView={setView} />
+                        <ViewsToolbar setView={setView} boardid={boardid} />
 
                         {/* {currBoard &&
                             <Link to="/main/homepage"><button className="home" onClick={() => setBoardsMenuVis(false)}>{home}</button></Link>

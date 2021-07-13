@@ -1,4 +1,4 @@
-import React, { useState, } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AddViewMenu } from './AddViewMenu/AddViewMenu';
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,13 +9,12 @@ import { FaTable, FaWpforms } from 'react-icons/fa'
 import { AiOutlineCalendar, AiOutlinePieChart } from 'react-icons/ai'
 import { useParams } from 'react-router';
 // import { useRouteMatch } from 'react-router-dom';
-import { useEffect } from 'react';
 
-export function ViewsToolbar({ setView }) {
+export function ViewsToolbar({ setView, boardid }) {
     const plusSign = <FontAwesomeIcon icon={faPlus} />
     const [isAddViewMenu, setAddViewMenu] = useState(false)
     const [isViewMenu, setViewMenu] = useState(false)
-    const { boardid } = useParams()
+    // const { boardid } = useParams()
     const { views } = useSelector(state => state.boardReducer.boards[boardid])
     // const { path, url } = useRouteMatch()
     const onToggleAddViews = () => {

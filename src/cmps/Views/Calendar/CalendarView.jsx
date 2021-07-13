@@ -1,35 +1,24 @@
-import React, { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
 import Calendar from 'react-calendar';
-// import 'react-calendar/dist/Calendar.css';
+
 
 export function CalendarView() {
-    // const state = useSelector(state => state.state)
 
-
-    useEffect(() => {
-        // component didMount
-        return () => {
-            // component willUnMount
-        }
-    }, [])
-
-
-    // const [value, onSetValue] = useState(new Date());
-    // const [change, setChange] = useState()
-
-    const a = (event, day) => {
-        console.log('event:', event)
-        console.log('clicked!:', day)
+    const value = new Date();
+    const a = () => {
+        var date = new Date(2021, 1, 1);
+        console.log('date:', date)
     }
+
+
     return (
         <div className="calendar-view">
             <Calendar
-                onChange={a}
+                allowPartialRange={true}
                 selectRange={true}
-                // value={value}
-                selectRange={true}
-            // onClickDay={(day) => console.log('day:', day)}
+                value={value}
+                onClickDay={() => a()}
+                showNeighboringMonth={false}
             />
 
         </div>

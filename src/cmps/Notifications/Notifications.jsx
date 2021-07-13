@@ -1,4 +1,7 @@
-import React, { useEffect,  } from 'react';
+import React, { useEffect, } from 'react';
+
+
+
 
 export function Notifications() {
 
@@ -14,6 +17,22 @@ export function Notifications() {
     return (
         <div className="notifications">
             <h2>notifications</h2>
+            <div className="notifications-top-bar ">
+                <ul className="flex space-between">
+                    <li>
+                        <p>All</p>
+                    </li>
+                    <li>
+                        <p>Unread</p>
+                    </li>
+                    <li>
+                        <p>I was mentioned</p>
+                    </li>
+                    <li>
+                        <p>Assgined to me</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     )
 
