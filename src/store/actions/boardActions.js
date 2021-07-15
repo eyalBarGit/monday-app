@@ -274,6 +274,33 @@ export function addToFavorites(viewId, boardid) {
     }
 }
 
+export function setBoardView(view, boardid) {
+    return async dispatch => {
+        const viewToSet = {
+            view, boardid
+        }
+        try {
+            dispatch(_setBoardView(viewToSet));
+        }
+        catch (err) {
+            throw err
+        }
+    }
+}
+
+
+export function toggleTheme() {
+    return async dispatch => {
+
+        try {
+            dispatch({ type: 'TOGGLE_THEME' });
+        }
+        catch (err) {
+            throw err
+        }
+    }
+}
+
 
 
 
@@ -287,15 +314,20 @@ function _addView(viewType) {
         data: viewType
     }
 }
+
+function _setBoardView(viewToSet) {
+    return {
+        type: 'SET_VIEW',
+        data: viewToSet
+    }
+}
 function _deleteView(viewId) {
-    console.log('viewId', viewId)
     return {
         type: 'REMOVE_VIEW',
         data: viewId
     }
 }
 function _addToFavorites(viewId) {
-    console.log('viewId', viewId)
     return {
         type: 'FAVORITE_VIEW',
         data: viewId

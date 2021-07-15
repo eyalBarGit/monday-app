@@ -1,0 +1,212 @@
+{
+    "t23b20a": {
+        "id": "t23b20a",
+        "groups": {
+            "Deals": [
+                "card-1",
+                "card-2",
+                "card-4"
+            ],
+            "Closed Won": [
+                "card-3",
+                "card-5",
+                "card-6"
+            ]
+        },
+        "bgColor": "#037F4C",
+        "columns": {
+            "Tasks": "",
+            "Owner": [
+                {
+                    "Title": "EB",
+                    "isOwner": true,
+                    "Group": "Contacts",
+                    "Company": "",
+                    "Type": "",
+                    "Priority": "",
+                    "Phone": "",
+                    "Email": "",
+                    "Notes": ""
+                },
+                {
+                    "Title": "David",
+                    "isOwner": false,
+                    "Group": "Contacts",
+                    "Company": "",
+                    "Type": "",
+                    "Priority": "",
+                    "Phone": "",
+                    "Email": "",
+                    "Notes": ""
+                }
+            ],
+            "Contacts": [
+                "Eyal"
+            ],
+            "Stage": [
+                "Proposal"
+            ],
+            "Priority": [
+                "High"
+            ],
+            "Company": [
+                ""
+            ],
+            "Deal Age": "",
+            "Deal Value": "60,000",
+            "Forecast Value": "",
+            "Expected Close Date": "",
+            "Close Date": "",
+            "Actual Deal Value": "120,000",
+            "Phone": "9945385",
+            "Location": "",
+            "Creation Log": "",
+            "Button": "",
+            "Text": "",
+            "Dependent On": "",
+            "Status": "Stuck",
+            "Timeline": "",
+            "Files": ""
+        }
+    },
+    "l63b30b": {
+        "id": "l63b30b",
+        "groups": {
+            "Deals": [
+                "card-1",
+                "card-2",
+                "card-4"
+            ],
+            "Closed Won": [
+                "card-3",
+                "card-5",
+                "card-6"
+            ]
+        },
+        "columns": {
+            "Tasks": "",
+            "Owner": [
+                {
+                    "Title": "EB",
+                    "isOwner": true,
+                    "Group": "Contacts",
+                    "Company": "",
+                    "Type": "",
+                    "Priority": "",
+                    "Phone": "",
+                    "Email": "",
+                    "Notes": ""
+                },
+                {
+                    "Title": "Iris",
+                    "isOwner": false,
+                    "Group": "Contacts",
+                    "Company": "",
+                    "Type": "",
+                    "Priority": "",
+                    "Phone": "",
+                    "Email": "",
+                    "Notes": ""
+                }
+            ],
+            "Contacts": [
+                "Eyal"
+            ],
+            "Stage": [
+                "Proposal"
+            ],
+            "Priority": [
+                "High"
+            ],
+            "Company": [
+                ""
+            ],
+            "Deal Age": "",
+            "Deal Value": "60,000",
+            "Forecast Value": "",
+            "Expected Close Date": "",
+            "Close Date": "",
+            "Actual Deal Value": "120,000",
+            "Phone": "9945385",
+            "Location": "",
+            "Creation Log": "",
+            "Button": "",
+            "Text": "",
+            "Dependent On": "",
+            "Status": "Stuck",
+            "Timeline": "",
+            "Files": ""
+        },
+        "bgColor": "#0086C0"
+    },
+    "b03e36l": {
+        "id": "b03e36l",
+        "groups": {
+            "Deals": [
+                "card-1",
+                "card-2",
+                "card-4"
+            ],
+            "Closed Won": [
+                "card-3",
+                "card-5",
+                "card-6"
+            ]
+        },
+        "columns": {
+            "Tasks": "",
+            "Owner": [
+                {
+                    "Title": "EB",
+                    "isOwner": true,
+                    "Group": "Contacts",
+                    "Company": "",
+                    "Type": "",
+                    "Priority": "",
+                    "Phone": "",
+                    "Email": "",
+                    "Notes": ""
+                },
+                {
+                    "Title": "Iris",
+                    "isOwner": false,
+                    "Group": "Contacts",
+                    "Company": "",
+                    "Type": "",
+                    "Priority": "",
+                    "Phone": "",
+                    "Email": "",
+                    "Notes": ""
+                }
+            ],
+            "Contacts": [
+                "Eyal"
+            ],
+            "Stage": [
+                "Proposal"
+            ],
+            "Priority": [
+                "High"
+            ],
+            "Company": [
+                ""
+            ],
+            "Deal Age": "",
+            "Deal Value": "60,000",
+            "Forecast Value": "",
+            "Expected Close Date": "",
+            "Close Date": "",
+            "Actual Deal Value": "120,000",
+            "Phone": "9945385",
+            "Location": "",
+            "Creation Log": "",
+            "Button": "",
+            "Text": "",
+            "Dependent On": "",
+            "Status": "Stuck",
+            "Timeline": "",
+            "Files": ""
+        },
+        "bgColor": "#0086C0"
+    }
+}

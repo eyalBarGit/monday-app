@@ -16,7 +16,7 @@ html {
 }
 
 body {
-    background-color: rgb(245, 245, 245);
+    background-color: unset;
     margin: 0;
 }
 
@@ -52,14 +52,10 @@ button {
     font-weight: 100;
     background-color: unset;
     text-decoration: none;
-    text-align: center;
     outline: none;
     border: none;
     &:active {
         transform: scale(0.999);
-    }
-    &:hover {
-        background-color: $HoverBtn;
     }
 }
 
@@ -88,4 +84,131 @@ option {
 }
 .gvScMw {
     width: unset !important;
+}
+
+//THEME
+.dark-theme {
+    background-color: #181b34;
+    color: #d5d8df;
+    .btn-add-views,
+    .view-btn,
+    .board-tool,
+    li:not(.inner-side-bar) {
+        &:hover {
+            background-color: rgba(116, 116, 156, 0.472) !important;
+        }
+    }
+
+    .new-deal button {
+        &:hover {
+            background-color: rgba(84, 84, 102, 0.572) !important;
+        }
+    }
+
+    .card-preview,
+    .hide-div,
+    .add-view-menu {
+        background-color: #181b34;
+        color: #d5d8df;
+    }
+
+    .views-menu {
+        background-color: #30324e;
+    }
+
+    .outer-side-bar {
+        border-right: 1px solid rgba(211, 211, 211, 0.438);
+    }
+    .board-tool button {
+        color: #fff !important;
+        &:hover {
+            background-color: rgba(51, 51, 61, 0.249) !important;
+            border-radius: 4px;
+        }
+    }
+
+    //SHADOW LINES
+    .mid-line,
+    .app-header-border,
+    .views-section {
+        -webkit-box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, 0.438);
+        box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, 0.438);
+    }
+}
+
+.light-theme {
+    background-color: #ffffff;
+    color: #323338;
+    .hide-div {
+        background-color: #ffffff;
+    }
+
+    li:not(.inner-side-bar) {
+        color: #323338;
+        &:hover {
+            background-color: rgba(116, 116, 156, 0.159) !important;
+        }
+    }
+    .btn-add-views,
+    .board-tool button {
+        background-color: #ffffff;
+        color: #323338;
+        &:hover {
+            background-color: rgba(116, 116, 156, 0.159) !important;
+            border-radius: 4px;
+        }
+    }
+    .new-deal button {
+        &:hover {
+            background-color: rgba(116, 116, 156, 0.559) !important;
+            border-radius: 4px;
+        }
+    }
+
+    .sidebar-arrow {
+        color: #fff;
+    }
+
+    .card-preview {
+        background-color: #ffffff;
+        color: #323338 !important;
+        -webkit-box-shadow: 2px 4px 1px -4px #000000 !important;
+        box-shadow: 2px 4px 1px -4px #000000 !important;
+    }
+    .views-menu,
+    .add-view-menu {
+        background-color: #ffffff;
+        color: #323338 !important;
+        -webkit-box-shadow: 0px 4px 15px -6px #000000;
+        box-shadow: 0px 4px 15px -6px #000000;
+        .disabled {
+            color: lightgray !important;
+        }
+    }
+
+    .view-btn {
+        button {
+            color: #323338;
+        }
+        &:hover {
+            background-color: rgba(116, 116, 156, 0.159) !important;
+        }
+    }
+    .dots {
+        &:hover {
+            background-color: #fff;
+        }
+    }
+
+    .outer-side-bar {
+        border-right: 1px solid #cdcfd4;
+    }
+
+    //SHADOW LINES
+    .mid-line,
+    .app-header-border,
+    .views-section {
+        -webkit-box-shadow: 0px 1px 0px 0px #cdcfd4;
+        box-shadow: 0px 1px 0px 0px #cdcfd4;
+    }
 }

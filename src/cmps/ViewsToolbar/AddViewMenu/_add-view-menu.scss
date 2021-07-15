@@ -2,7 +2,6 @@
     width: 200px;
     height: fit-content;
     position: absolute;
-    background-color: #30324E;
     border-radius: 10px;
     top: 50px;
     padding: 0 10px 30px 10px;
@@ -23,5 +22,8 @@
         span {
             margin-inline-end: 10px;
         }
+    }
+    .disabled {
+        color: rgba(183, 185, 183, 0.431);
     }
 }

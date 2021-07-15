@@ -6,31 +6,46 @@ import { Table } from '../../cmps/Views/Table/Table';
 import { useState } from 'react';
 import { useParams } from 'react-router';
 import { CalendarView } from '../../cmps/Views/Calendar/CalendarView'
-import { useSelector } from 'react-redux';
-
+import { useDispatch, useSelector } from 'react-redux';
+import { setBoardView, saveToStorage } from '../../store/actions/boardActions'
 
 export function BoardContainer() {
-    const state = useSelector(state => state.boardReducer)
+    const boards = useSelector(state => state.boardReducer.boards)
+    const tablesState = useSelector(state => state.tableReducer.tables)
+    const listsState = useSelector(state => state.listReducer.lists)
+    const state = useSelector(state => state.stateReducer)
 
     const { boardid } = useParams()
-    const [view, setView] = useState(state.boards[boardid].currView)
+    const [view, onSetView] = useState(boards[boardid].currView)
+    const activeBoard = boards[boardid]
+    const [currBoard, setBoard] = useState(boards[boardid])
 
-    const activeBoard = state.boards[boardid]
 
-    const [currBoard, setBoard] = useState()
+    const dispatch = useDispatch()
+
+    useEffect(() => { dispatch(saveToStorage('boards', boards)) }, [boards, dispatch])
+    useEffect(() => { dispatch(saveToStorage('lists', listsState)) }, [listsState, dispatch])
+    useEffect(() => { dispatch(saveToStorage('tables', tablesState)) }, [tablesState, dispatch])
+    useEffect(() => { dispatch(saveToStorage('state', state)) }, [state, dispatch])
+
+
 
     useEffect(() => {
         setBoard(activeBoard)
-        setView(activeBoard.currView)
-        return () => {
+        onSetView(currBoard.currView)
+    }, [boardid, activeBoard, currBoard.currView], onSetView)
 
-        }
-    }, [boardid, activeBoard,activeBoard.currView])
+
+    const setView = (view) => {
+        dispatch(setBoardView(view, boardid))
+        onSetView(view)
+    }
+
 
     return (
         <div className="board-container">
             <AppHeader setView={setView} />
-            <hr />
+            {view === 'Kanban' && <hr className="app-header-border" />}
             <div className="main-content-board-container">
                 {view === 'Kanban' &&
                     <Kanban boardid={boardid} />

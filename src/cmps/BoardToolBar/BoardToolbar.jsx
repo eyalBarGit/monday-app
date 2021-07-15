@@ -22,18 +22,18 @@ export function BoardToolbar() {
     return (
         <div className="board-toolbar">
             <ul className="flex align-center">
-                <li className="new-deal">
-                    <button>New Deal</button><span className="new-deal-dropdown"><button><FiChevronDown /></button></span>
-                </li>
-                <li>
+                <div className="new-deal flex">
+                    <button className="board-tool">New Deal</button><span className="new-deal-dropdown"><button className="arrow-btn flex justify-center board-tool"><FiChevronDown /></button></span>
+                </div>
+                <div className="board-tool">
                     <button><span className="icon"><AiOutlineSearch /></span>Search</button>
-                </li>
-                <li>
+                </div>
+                <div className="board-tool">
                     <button><span className="icon">{person}</span>Person</button>
-                </li>
-                <li>
+                </div>
+                <div className="board-tool">
                     <button><span className="icon"><BiFilterAlt /></span>Filter </button>
-                </li>
+                </div>
             </ul>
 
         </div>

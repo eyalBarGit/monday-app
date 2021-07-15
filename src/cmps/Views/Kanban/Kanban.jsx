@@ -2,20 +2,15 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import styled from 'styled-components'
 import { useDispatch, useSelector } from 'react-redux';
 import { List } from '../../List/List'
-import {
-    saveToStorage,
-    dragList,
-    // setActiveBoard,
-    toggleBgSide,
-} from '../../../store/actions/boardActions'
+import { dragList, toggleBgSide, } from '../../../store/actions/boardActions'
 import { dragInsideList, dragOutsideList, } from '../../../store/actions/listActions'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 import { CardDetails } from '../../CardDetails/CardDetails'
 import { BlackScreen } from '../../CardDetails/BlackScreen/BlackScreen'
 // import { AddList } from '../AddList/AddList'
-import { useParams } from 'react-router';
+// import { useParams } from 'react-router';
 
-export function Kanban({boardid}) {
+export function Kanban({ boardid }) {
     // const { boardid } = useParams();
     const boards = useSelector(boards => boards.boardReducer)
     const listsState = useSelector(state => state.listReducer.lists)
@@ -28,8 +23,8 @@ export function Kanban({boardid}) {
     const boardRef = useRef(null)
 
 
-    useEffect(() => { dispatch(saveToStorage('boards', boards)) }, [boards, dispatch])
-    useEffect(() => { dispatch(saveToStorage('lists', listsState)) }, [listsState, dispatch])
+    // useEffect(() => { dispatch(saveToStorage('boards', boards)) }, [boards, dispatch])
+    // useEffect(() => { dispatch(saveToStorage('lists', listsState)) }, [listsState, dispatch])
 
 
     const loadCurrBoard = useCallback(() => {

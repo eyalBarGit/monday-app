@@ -1,16 +1,9 @@
 import UTILS from '../../service/utils'
 import boards from '../../data/boards'
-var initialState = UTILS.loadFromStorage('boards')
-if (!initialState || !initialState.isInitialized) {
-    initialState = {
-        boards: boards,
-        favBoards: [],
-        activeBoard: '',
-        isCardDetailShown: false,
-        isBgSideOpen: false,
-        isInitialized: true,
-    };
-}
+var boardsFromStorage = UTILS.loadFromStorage('boards')
+var initialState = {
+    boards: boardsFromStorage || boards,
+};
 
 export default function boardReducer(state = initialState, action) {
     switch (action.type) {
@@ -188,7 +181,7 @@ export default function boardReducer(state = initialState, action) {
 
 
         case 'ADD_VIEW':
-            console.log('action.data:', action.data)
+            // console.log('action.data:', action.data)
             return {
                 ...state,
                 boards: {
@@ -200,7 +193,7 @@ export default function boardReducer(state = initialState, action) {
                 }
             };
         case 'REMOVE_VIEW':
-            console.log('action.', action)
+            // console.log('action.', action)
             var viewList = state.boards[action.data.boardid].views
             var currViewIdx = viewList.findIndex((view) => { return view.id === action.data.viewId })
             viewList.splice(currViewIdx, 1)
@@ -213,8 +206,25 @@ export default function boardReducer(state = initialState, action) {
                         views: [...viewList]
                     }
                 }
-                // views: [...viewList]
             };
+        case 'SET_VIEW':
+            return {
+                ...state,
+                boards: {
+                    ...state.boards,
+                    [action.data.boardid]: {
+                        ...state.boards[action.data.boardid],
+                        currView: action.data.view
+                    }
+                },
+            };
+
+        case 'TOGGLE_THEME':
+            return {
+                ...state,
+                theme: state.theme === 'light' ? 'dark' : 'light'
+            };
+
         case 'DISABLE_STORAGE_RESET':
             return {
                 ...state,

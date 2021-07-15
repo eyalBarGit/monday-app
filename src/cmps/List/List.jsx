@@ -5,11 +5,10 @@ import { AddCard } from '../AddCard/AddCard'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
-// import { ListMenu } from '../ListMenu/ListMenu';
+
 import { ChangeListTitle } from '../ChangeListTitle/ChangeListTitle'
 import { MoveList } from '../ListMenu/MoveList/MoveList'
-import { useDispatch, useSelector } from 'react-redux';
-import { saveToStorage } from '../../store/actions/boardActions'
+import {  useSelector } from 'react-redux';
 
 
 
@@ -22,12 +21,9 @@ export function List({ listId, currBoard, index, }) {
 
     const listsState = useSelector(state => state.listReducer.lists)
     const cardsState = useSelector(state => state.cardReducer.cards)
-    const dispatch = useDispatch()
 
     const plus = <FontAwesomeIcon icon={faPlus} />
 
-    useEffect(() => { dispatch(saveToStorage('lists', listsState)) }, [listsState, dispatch])
-    useEffect(() => { dispatch(saveToStorage('cards', cardsState)) }, [cardsState, dispatch])
 
 
     const loadCurrList = useCallback(() => {
@@ -92,25 +88,10 @@ export function List({ listId, currBoard, index, }) {
                                     />
                                 </span>
                                 }
-                                {/* <div className="menu-btn">
-                                    <span className="list-menu-section align-center flex"
-                                        onClick={onToggleListMenu}>
-                                        {listMenu}
-                                    </span>
-                                </div> */}
+
                             </span>
                         </div>
-                        {/* {isListMenuShown &&
-                            <ListMenu
-                                toggleListMenu={onToggleListMenu}
-                                listsState={listsState}
-                                currList={currList}
-                                toggleAddCard={onToggleAddCard}
-                                toggleEditTitle={toggleEditTitle}
-                                onToggleMoveList={onToggleMoveList}
-                                currBoard={currBoard}
-                            />
-                        } */}
+
                         <div className="main-container margin-center">
                             <Droppable droppableId={listId} type="card">
                                 {(provided, snapshot) => {
@@ -144,7 +125,7 @@ export function List({ listId, currBoard, index, }) {
                             {isAddCardShown && <div className="add-card-section">
                                 <AddCard toggleAddCard={onToggleAddCard}
                                     currList={currList}
-                                     />
+                                />
                             </div>
                             }
                             <div className="div">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { favoriteBoard, removeSavedBoard } from '../../store/actions/boardActions'
 // import { faEllipsisH } from '@fortawesome/free-solid-svg-icons'
@@ -53,11 +53,6 @@ export function AppHeader({ setView }) {
         setHeaderMenu(!isHeaderMenuVisible)
     }
 
-    useEffect(() => {
-        console.log('boardid:', boardid)
-
-
-    }, [])
 
 
 
@@ -78,7 +73,6 @@ export function AppHeader({ setView }) {
                             < AppHeaderMenu
                                 onRemoveSavedBoard={removeSavedBoard}
                                 currBoard={currBoard}
-                                // activeBoard={activeBoard}
                                 onToggleAppHeaderMenu={onToggleAppHeaderMenu} />
                         </div>
                     }

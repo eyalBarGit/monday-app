@@ -8,26 +8,29 @@ import { useSelector } from 'react-redux';
 import { FaTable, FaWpforms } from 'react-icons/fa'
 import { AiOutlineCalendar, AiOutlinePieChart } from 'react-icons/ai'
 import { useParams } from 'react-router';
-// import { useRouteMatch } from 'react-router-dom';
 
-export function ViewsToolbar({ setView, boardid }) {
-    const plusSign = <FontAwesomeIcon icon={faPlus} />
+export function ViewsToolbar({ setView }) {
+    const boards = useSelector(state => state.boardReducer.boards)
     const [isAddViewMenu, setAddViewMenu] = useState(false)
     const [isViewMenu, setViewMenu] = useState(false)
-    // const { boardid } = useParams()
+
+    const { boardid } = useParams()
     const { views } = useSelector(state => state.boardReducer.boards[boardid])
-    // const { path, url } = useRouteMatch()
+    const [currView, setCurrView] = useState(boards[boardid].currView)
+
+    const plusSign = <FontAwesomeIcon icon={faPlus} />
+
     const onToggleAddViews = () => {
         setAddViewMenu(!isAddViewMenu)
     }
     const onToggleViewMenu = () => {
         setViewMenu(!isViewMenu)
     }
-    useEffect(() => {
-        // console.log('path:', path)
-        // console.log('url:', url)
 
-    }, [])
+    useEffect(() => {
+        setCurrView(boards[boardid].currView)
+
+    }, [currView, boardid, boards])
 
     const icon = (view) => {
         switch (view) {
@@ -41,7 +44,6 @@ export function ViewsToolbar({ setView, boardid }) {
                 return <AiOutlinePieChart />
             case "Form":
                 return <FaWpforms />
-
             default:
                 break;
         }
@@ -52,7 +54,7 @@ export function ViewsToolbar({ setView, boardid }) {
         <div className="views-toolbar flex align-center" onClick={isAddViewMenu ? () => setAddViewMenu(false) : null}>
             {views && views.map((view, idx) => {
                 return <div key={idx} className="view-btn">
-                    <button onClick={() => setView(view.type)}> <span className="icon">{icon(view.type)}</span> <span className="view-type"> {view.type}</span></button>
+                    <button onClick={() => setView(view.type)}> <span className="icon">{icon(view.type)}</span> <span className={`view-type ${currView === view.type ? 'active' : ''}`}> {view.type}</span></button>
                     <div className="hoverable-menu">
                         <span className="dots flex align-center"> <BsThreeDots onClick={onToggleViewMenu} /></span>
                         {isViewMenu && <ViewsMenu view={view} setViewMenu={setViewMenu} boardid={boardid} />}

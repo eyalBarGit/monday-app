@@ -1,5 +1,7 @@
 .card-details {
+    color: #d5d8df;
     .card-details-board {
+        padding: 35px 55px;
         z-index: 99;
         position: absolute;
         top: 50%;
@@ -11,129 +13,35 @@
         background-color: #181b34;
         overflow-y: auto;
         color: #d5d8df;
-
         .main {
             position: relative;
-            padding: 25px;
-            .margin-bottom {
+            .card-title {
+                h1 {
+                    margin: 0 0 15px 0;
+                    font-weight: 500;
+                    font-size: 26px;
+                }
+            }
+            .board-related {
+                font-size: 14px;
                 margin-bottom: 20px;
             }
-            h3 {
-                margin: 0;
-                color: #091e42;
-                font-weight: 500;
-                font-size: 16px;
-            }
-            .checkList-section {
-                height: 400px;
-                overflow-y: auto;
-                overflow-x: hidden;
-                padding-inline-end: 5px;
-                form {
-                    width: 100%;
-                    input {
-                        width: 100%;
-                    }
-                }
-            }
-            .left-side {
-                width: 450px;
-                .title-section {
-                    height: 50px;
-                    h3 {
-                        cursor: pointer;
-                    }
-                    .align-center .flex {
-                        height: 25px;
-                        align-items: center;
-                    }
-                    .icon {
-                        width: 15px;
-                    }
-                    .title {
-                        margin-inline-start: 10px;
-                        .edit-title-pencil {
-                            margin-inline-start: 10px;
-                            font-size: 10px;
-                        }
-                    }
-
-                    .watched-section {
-                        margin-inline-start: 5px;
-                        font-size: 13px;
-                    }
-                }
-                .due-date-section {
-                    padding-inline-start: 25px;
-                    p {
-                        font-size: 10px;
-                        margin: 0;
-                    }
-                    .remove-date {
-                        cursor: pointer;
-                    }
-                }
-                .icon {
-                    width: 15px;
-                    color: $Text;
-                }
-                .labels {
-                    margin-inline-start: 25px;
-                    width: 100%;
-                    p {
-                        margin-top: 0;
-                        margin-bottom: 0;
-                    }
-                }
-                .description-title {
-                    width: 100%;
-                    h3 {
-                        margin-block-end: 10px;
-                    }
-                    margin-inline-start: 10px;
-                }
-                .card-description-box {
-                    min-height: 50px;
-                    border-radius: 5px;
-                    padding-block-start: 5px;
-                    padding-inline-start: 10px;
-                    background-color: #e8ebf1;
-                    margin-block-end: 10px;
-                    &:hover {
-                        background-color: #e5e9f1;
-                        cursor: pointer;
-                    }
-                    p {
-                        margin: 0;
-                        font-size: 14px;
-                        font-weight: lighter;
-                    }
-                }
-            }
-            .right-side {
-                position: relative;
-                .mobile-menu {
-                    position: absolute;
-                    top: 40px;
-                    right: -10px;
-                    display: none;
-                }
-            }
+            
         }
-    }
-    @media (max-width: 750px) {
-        .card-details-board {
-            width: 100vw;
-            height: fit-content;
-            z-index: 60;
-            .main {
-                .left-side {
-                    width: 98%;
-                }
-                .right-side {
-                    width: 15px;
-                    .mobile-menu {
-                        display: block;
+        @media (max-width: 750px) {
+            .card-details-board {
+                width: 100vw;
+                height: fit-content;
+                z-index: 60;
+                .main {
+                    .left-side {
+                        width: 98%;
+                    }
+                    .right-side {
+                        width: 15px;
+                        .mobile-menu {
+                            display: block;
+                        }
                     }
                 }
             }

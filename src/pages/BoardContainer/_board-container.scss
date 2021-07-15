@@ -1,6 +1,8 @@
 .board-container {
-    overflow:hidden;
+    overflow: hidden;
     width: 100vw;
-    background-color: #1c1f3b;
     max-height: 100vh;
+    .app-header-border {
+        height: 1px;
+    }
 }
