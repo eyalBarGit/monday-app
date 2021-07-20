@@ -1,21 +1,20 @@
-import React, { useEffect, useState, useRef, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 import { dragInsideList, dragOutsideList, } from '../../../store/actions/listActions'
 import { dragList, } from '../../../store/actions/boardActions'
 import styled from 'styled-components'
-import { TaskPreview } from '../../Table-DND/TaskPreview/TaskPreview';
+// import { TaskPreview } from '../../Table-DND/TableTaskPreview/TableTaskPreview';
 
 export function Table({ boardid }) {
     const boards = useSelector(state => state.boardReducer.boards)
     const tables = useSelector(state => state.tableReducer.tables)
-    const listOrder = useSelector(boards => boards.boardReducer.boards[boardid].listOrder)
+    // const listOrder = useSelector(boards => boards.boardReducer.boards[boardid].listOrder)
     const listsState = useSelector(state => state.listReducer.lists)
 
     const [currTable, setCurrTable] = useState(null)
     const [currBoard, setCurrBoard] = useState(boards[boardid])
     const dispatch = useDispatch()
-    const boardRef = useRef(null)
 
 
     const onDragEnd = (result) => {
@@ -45,18 +44,18 @@ export function Table({ boardid }) {
     const loadCurrBoard = useCallback(() => {
         let currentBoard = boards[boardid]
         setCurrBoard(currentBoard)
-    }, [boardid, boards.boards])
+    }, [boardid, boards])
 
     useEffect(() => {
         console.log('tables:', tables)
         loadCurrBoard()
         setCurrTable(tables[currBoard.tableId])
-     
-    }, [tables])
+
+    }, [tables,currBoard.tableId,loadCurrBoard])
 
 
     return (
-        <DragDropContext
+    <DragDropContext
             onDragEnd={onDragEnd}
             onDragStart={ondragstart}
         >

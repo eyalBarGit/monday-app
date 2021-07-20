@@ -2,7 +2,7 @@
     bottom: 0;
     top: 0;
     left: 0;
-    height: 100vh;
+    z-index: 31;
     ul {
         padding: 0;
         li {
@@ -81,7 +81,6 @@
                     }
                     padding: 5px;
                     &:hover {
-                        background-color: #6a6e82af;
                         border-radius: 5px;
                     }
                 }
@@ -96,7 +95,6 @@
                     padding: 5px 0;
                     width: 100%;
                     &:hover {
-                        background-color: #6a6e829f;
                         border-radius: 5px;
                     }
                     .crm-line {

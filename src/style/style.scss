@@ -42,6 +42,7 @@
 @import "../cmps/ActionForm/action-form";
 @import "../cmps/CardDetails/LabelsMenu/labels-menu";
 @import "../cmps/CardDetails/CardLabel/card-label";
+@import "../cmps/CardDetails/DynamicDetails/dynamic-details";
 @import "../cmps/AppHeader/BoardsMenu/boards-menu";
 @import "../cmps/CardPreview/card-preview";
 @import "../cmps/Notifications/notifications";
@@ -51,4 +52,4 @@
 @import "../cmps/BoardToolBar/board-toolbar";
 @import "../cmps/Views/Calendar/calendar-view";
 @import "../cmps/Views/Table/table";
-@import "../cmps/Table-DND/TaskPreview/task-preview";
+@import "../cmps/Table-DND/TableTaskPreview/table-task-preview";

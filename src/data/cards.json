@@ -2,54 +2,21 @@
     "card-1": {
         "id": "card-1",
         "title": "Go to the groceries store",
-        "desc": "Click here to change the description",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "toDo-chelcklist",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "Do-Not-Forget",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": false
-                    }
-                }
-            }
-        },
-        "cardCover": "#4ae06d",
-        "labels": [
-            "#e04a4a"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
+        "Contacts": [
+            "Eyal"
+        ],
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -64,62 +31,31 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#4ae06d",
+        "labels": [
+            "#e04a4a"
+        ]
     },
     "card-2": {
         "id": "card-2",
         "title": "Watch the kids",
-        "desc": "Click here to change the description",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#3874ed",
-        "labels": [
-            "#e04a4a",
-            "#f9af4d",
-            "#3874ed",
-            "#ffff51"
-        ],
-        "Group": "Closed Won",
         "Tasks": "",
+        "Group": "Closed Won",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -134,59 +70,34 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#3874ed",
+        "labels": [
+            "#e04a4a",
+            "#f9af4d",
+            "#3874ed",
+            "#ffff51"
+        ]
     },
     "card-3": {
         "id": "card-3",
         "title": "Get new keyboard",
-        "desc": "Buy on Micorosoft keyboard!",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": false
-                    }
-                }
-            }
-        },
-        "cardCover": "#ab4ae0",
-        "labels": [
-            "#4ae06d"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -201,59 +112,31 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#ab4ae0",
+        "labels": [
+            "#4ae06d"
+        ]
     },
     "card-4": {
         "id": "card-4",
         "title": "Get new shirt",
-        "desc": "Click here to change the description",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": false
-                    }
-                }
-            }
-        },
-        "cardCover": "#f9af4d",
-        "labels": [
-            "#ab4ae0"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -268,59 +151,31 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#f9af4d",
+        "labels": [
+            "#ab4ae0"
+        ]
     },
     "card-5": {
         "id": "card-5",
         "title": "Finish house chors",
-        "desc": "Click here to change the description",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "Clean the windows",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "Vaccum clean",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#ffff51",
-        "labels": [
-            "#3874ed"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -335,59 +190,31 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#ffff51",
+        "labels": [
+            "#3874ed"
+        ]
     },
     "card-6": {
         "id": "card-6",
         "title": "Finish adding demo data",
-        "desc": "Add demo data to all cards",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "this is demo checklist item",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "this is another demo checklist item",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#f9af4d",
-        "labels": [
-            "#e04a4a"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -402,43 +229,31 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#f9af4d",
+        "labels": [
+            "#e04a4a"
+        ]
     },
     "card-7": {
         "id": "card-7",
         "title": "Demo card",
-        "desc": "Click to change description",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#4ae06d",
-        "labels": [
-            "#4ae06d"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -453,59 +268,31 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#4ae06d",
+        "labels": [
+            "#4ae06d"
+        ]
     },
     "card-8": {
         "id": "card-8",
         "title": "Get the kids from school",
-        "desc": "Click here to change card description",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#f9af4d",
-        "labels": [
-            "#ab4ae0"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -520,59 +307,31 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#f9af4d",
+        "labels": [
+            "#ab4ae0"
+        ]
     },
     "card-9": {
         "id": "card-9",
         "title": "Learn JWT",
-        "desc": "Click here to change card description",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#4ae06d",
-        "labels": [
-            "#ffff51"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -587,59 +346,31 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#4ae06d",
+        "labels": [
+            "#ffff51"
+        ]
     },
     "card-10": {
         "id": "card-10",
         "title": "New demo card",
-        "desc": "Click here to change card description",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": false
-                    }
-                }
-            }
-        },
-        "cardCover": "#3874ed",
-        "labels": [
-            "#ffff51"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -654,59 +385,31 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#3874ed",
+        "labels": [
+            "#ffff51"
+        ]
     },
     "card-11": {
         "id": "card-11",
         "title": "Get food for the cats",
-        "desc": "Click here to change card description",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#e04a4a",
-        "labels": [
-            "#3874ed"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -721,64 +424,31 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#e04a4a",
+        "labels": [
+            "#3874ed"
+        ]
     },
     "card-12": {
         "id": "card-12",
         "title": "Get food for the dogs",
-        "desc": "Click here to change card description",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#ab4ae0",
-        "labels": [
-            "#e04a4a",
-            "#4ae06d",
-            "#ab4ae0",
-            "#f9af4d",
-            "#3874ed",
-            "#ffff51"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -793,64 +463,36 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#ab4ae0",
+        "labels": [
+            "#e04a4a",
+            "#4ae06d",
+            "#ab4ae0",
+            "#f9af4d",
+            "#3874ed",
+            "#ffff51"
+        ]
     },
     "card-16": {
         "id": "card-16",
         "title": "card-title-1",
-        "desc": "card-desc-1",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#ab4ae0",
-        "labels": [
-            "#e04a4a",
-            "#4ae06d",
-            "#ab4ae0",
-            "#f9af4d",
-            "#3874ed",
-            "#ffff51"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -865,64 +507,36 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#ab4ae0",
+        "labels": [
+            "#e04a4a",
+            "#4ae06d",
+            "#ab4ae0",
+            "#f9af4d",
+            "#3874ed",
+            "#ffff51"
+        ]
     },
     "card-26": {
         "id": "card-26",
         "title": "card-title-1",
-        "desc": "card-desc-1",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#ab4ae0",
-        "labels": [
-            "#e04a4a",
-            "#4ae06d",
-            "#ab4ae0",
-            "#f9af4d",
-            "#3874ed",
-            "#ffff51"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -937,64 +551,36 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#ab4ae0",
+        "labels": [
+            "#e04a4a",
+            "#4ae06d",
+            "#ab4ae0",
+            "#f9af4d",
+            "#3874ed",
+            "#ffff51"
+        ]
     },
     "card-36": {
         "id": "card-36",
         "title": "card-title-1",
-        "desc": "card-desc-1",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#ab4ae0",
-        "labels": [
-            "#e04a4a",
-            "#4ae06d",
-            "#ab4ae0",
-            "#f9af4d",
-            "#3874ed",
-            "#ffff51"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -1009,64 +595,36 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#ab4ae0",
+        "labels": [
+            "#e04a4a",
+            "#4ae06d",
+            "#ab4ae0",
+            "#f9af4d",
+            "#3874ed",
+            "#ffff51"
+        ]
     },
     "card-46": {
         "id": "card-46",
         "title": "card-title-1",
-        "desc": "card-desc-1",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": false
-                    }
-                }
-            }
-        },
-        "cardCover": "#ab4ae0",
-        "labels": [
-            "#e04a4a",
-            "#4ae06d",
-            "#ab4ae0",
-            "#f9af4d",
-            "#3874ed",
-            "#ffff51"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -1081,64 +639,36 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#ab4ae0",
+        "labels": [
+            "#e04a4a",
+            "#4ae06d",
+            "#ab4ae0",
+            "#f9af4d",
+            "#3874ed",
+            "#ffff51"
+        ]
     },
     "card-57": {
         "id": "card-57",
         "title": "card-title-1",
-        "desc": "card-desc-1",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#ab4ae0",
-        "labels": [
-            "#e04a4a",
-            "#4ae06d",
-            "#ab4ae0",
-            "#f9af4d",
-            "#3874ed",
-            "#ffff51"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -1153,64 +683,36 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#ab4ae0",
+        "labels": [
+            "#e04a4a",
+            "#4ae06d",
+            "#ab4ae0",
+            "#f9af4d",
+            "#3874ed",
+            "#ffff51"
+        ]
     },
     "card-67": {
         "id": "card-67",
         "title": "card-title-1",
-        "desc": "card-desc-1",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#ab4ae0",
-        "labels": [
-            "#e04a4a",
-            "#4ae06d",
-            "#ab4ae0",
-            "#f9af4d",
-            "#3874ed",
-            "#ffff51"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -1225,64 +727,36 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#ab4ae0",
+        "labels": [
+            "#e04a4a",
+            "#4ae06d",
+            "#ab4ae0",
+            "#f9af4d",
+            "#3874ed",
+            "#ffff51"
+        ]
     },
     "card-77": {
         "id": "card-77",
         "title": "card-title-1",
-        "desc": "card-desc-1",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#ab4ae0",
-        "labels": [
-            "#e04a4a",
-            "#4ae06d",
-            "#ab4ae0",
-            "#f9af4d",
-            "#3874ed",
-            "#ffff51"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -1297,64 +771,36 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#ab4ae0",
+        "labels": [
+            "#e04a4a",
+            "#4ae06d",
+            "#ab4ae0",
+            "#f9af4d",
+            "#3874ed",
+            "#ffff51"
+        ]
     },
     "card-87": {
         "id": "card-87",
         "title": "card-title-1",
-        "desc": "card-desc-1",
-        "isWatched": true,
-        "dueDate": "Sun Dec 27 2020",
-        "checklist": {
-            "check-1": {
-                "id": "check-1",
-                "name": "checklist-1",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": false
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            },
-            "check-2": {
-                "id": "check-2",
-                "name": "checklist-2",
-                "list": {
-                    "firstOne": {
-                        "id": "firstOne",
-                        "text": "firstOne",
-                        "isChecked": true
-                    },
-                    "secondOne": {
-                        "id": "secondOne",
-                        "text": "secondOne",
-                        "isChecked": true
-                    }
-                }
-            }
-        },
-        "cardCover": "#ab4ae0",
-        "labels": [
-            "#e04a4a",
-            "#4ae06d",
-            "#ab4ae0",
-            "#f9af4d",
-            "#3874ed",
-            "#ffff51"
-        ],
         "Group": "Closed Won",
         "Tasks": "",
         "Owner": "EB",
-        "Contacts": ["Eyal"],
-        "Stage": ["Proposal"],
-        "Priority": ["High"],
-        "Company": [""],
+        "Contacts": [
+            "Eyal"
+        ],
+        "Stage": [
+            "Proposal"
+        ],
+        "Priority": [
+            "High"
+        ],
+        "Company": [
+            ""
+        ],
         "Deal Age": "",
         "Deal Value": "60,000",
         "Forecast Value": "",
@@ -1369,6 +815,16 @@
         "Dependent On": "",
         "Status": "Stuck",
         "Timeline": "",
-        "Files": ""
+        "Files": "",
+        "Checkbox": false,
+        "cardCover": "#ab4ae0",
+        "labels": [
+            "#e04a4a",
+            "#4ae06d",
+            "#ab4ae0",
+            "#f9af4d",
+            "#3874ed",
+            "#ffff51"
+        ]
     }
 }

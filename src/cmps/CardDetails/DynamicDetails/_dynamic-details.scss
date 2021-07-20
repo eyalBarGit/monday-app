@@ -1,0 +1,23 @@
+.dynamic-details {
+    width: 100%;
+    height: 55px;
+    font-size: 15px;
+    .value {
+        width: 60%;
+        height: 80%;
+        background-color: rgba(161, 161, 161, 0.092);
+        cursor: pointer;
+        .doted-border {
+            border: 1px dotted black;
+            display: none;
+        }
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.189);
+            .doted-border {
+                display: block !important;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}

@@ -36,7 +36,7 @@ export function CardPreview({ cardid, index }) {
                         ref={provided.innerRef}
                         isDragging={snapshot.isDragging}
                     >
-                        <div className="card-preview margin-center">
+                        <div className="card-preview margin-center ">
                             <div className="main-content-task-preview">
                                 <p className="deal-name">{currCard?.title}</p>
                                 <div className="details flex">

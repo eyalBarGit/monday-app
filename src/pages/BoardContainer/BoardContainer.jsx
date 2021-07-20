@@ -45,8 +45,9 @@ export function BoardContainer() {
     return (
         <div className="board-container">
             <AppHeader setView={setView} />
-            {view === 'Kanban' && <hr className="app-header-border" />}
-            <div className="main-content-board-container">
+            {/* {view === 'Kanban' && <hr className="app-header-border shadow-line" />} */}
+
+            <div className="main-content-board-container flex column">
                 {view === 'Kanban' &&
                     <Kanban boardid={boardid} />
                 }

@@ -53,7 +53,7 @@ export function ViewsToolbar({ setView }) {
     return (
         <div className="views-toolbar flex align-center" onClick={isAddViewMenu ? () => setAddViewMenu(false) : null}>
             {views && views.map((view, idx) => {
-                return <div key={idx} className="view-btn">
+                return <div key={idx} className="view-btn light-hover">
                     <button onClick={() => setView(view.type)}> <span className="icon">{icon(view.type)}</span> <span className={`view-type ${currView === view.type ? 'active' : ''}`}> {view.type}</span></button>
                     <div className="hoverable-menu">
                         <span className="dots flex align-center"> <BsThreeDots onClick={onToggleViewMenu} /></span>
@@ -63,7 +63,7 @@ export function ViewsToolbar({ setView }) {
             })}
             |
             <div className="add-views-section">
-                <button className="btn-add-views" onClick={onToggleAddViews}><span className="plus-sign">{plusSign}</span>Add View</button>
+                <button className="btn-add-views light-hover" onClick={onToggleAddViews}><span className="plus-sign">{plusSign}</span>Add View</button>
                 {isAddViewMenu && <AddViewMenu setAddViewMenu={setAddViewMenu} />}
             </div>
         </div >

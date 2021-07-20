@@ -58,55 +58,58 @@ export function AppHeader({ setView }) {
 
     return (
         <nav className="app-header flex column">
-            {currBoard &&
-                <div className={`top-nav flex align-center ${bottomNav}`}>
-                    <h1> {currBoard.name}</h1>
-                    <button onClick={onSaveBoard} className={`btn btn-fav-board ${currBoard?.isFav ? 'saved' : ''}`}>{star}</button>
-                    {showSavedTitle &&
-                        <p className="save-notification">saved!</p>
-                    }
-                    {isHeaderMenuVisible &&
-                        <div>
-                            <span onClick={() => setHeaderMenu(false)} >
-                                <BlackScreen />
-                            </span>
-                            < AppHeaderMenu
-                                onRemoveSavedBoard={removeSavedBoard}
-                                currBoard={currBoard}
-                                onToggleAppHeaderMenu={onToggleAppHeaderMenu} />
-                        </div>
-                    }
-                </div>
-            }
-            <div className="mid-part flex">
-                <div className="nav-tools flex space-between align-center">
-                    <div className="views-section flex align-center">
-                        <ViewsToolbar setView={setView} boardid={boardid} />
+            <div className="container">
 
-                        {/* {currBoard &&
-                            <Link to="/main/homepage"><button className="home" onClick={() => setBoardsMenuVis(false)}>{home}</button></Link>
-                        } */}
-                        {isBoardsMenuVis &&
+                {currBoard &&
+                    <div className={`top-nav flex align-center ${bottomNav}`}>
+                        <h1> {currBoard.name}</h1>
+                        <button onClick={onSaveBoard} className={`btn btn-fav-board ${currBoard?.isFav ? 'saved' : ''}`}>{star}</button>
+                        {showSavedTitle &&
+                            <p className="save-notification">saved!</p>
+                        }
+                        {isHeaderMenuVisible &&
                             <div>
-                                <span onClick={() => setBoardsMenuVis(false)} >
+                                <span onClick={() => setHeaderMenu(false)} >
                                     <BlackScreen />
                                 </span>
-                                <AppHeaderMenu closeBoard={() => setBoardsMenuVis(false)} currBoard={currBoard} />
+                                < AppHeaderMenu
+                                    onRemoveSavedBoard={removeSavedBoard}
+                                    currBoard={currBoard}
+                                    onToggleAppHeaderMenu={onToggleAppHeaderMenu} />
                             </div>
                         }
                     </div>
+                }
+                <div className="mid-part flex">
+                    <div className="nav-tools flex space-between align-center">
+                        <div className="views-section flex align-center shadow-line">
+                            <ViewsToolbar setView={setView} boardid={boardid} />
 
-                    <div className="right-side flex align-center">
-                        {currBoard &&
-                            <div>
-                                <button className="app-header-menu-btn" onClick={onToggleAppHeaderMenu}>{plusSign}</button>
-                            </div>
-                        }
+                            {/* {currBoard &&
+                            <Link to="/main/homepage"><button className="home" onClick={() => setBoardsMenuVis(false)}>{home}</button></Link>
+                        } */}
+                            {isBoardsMenuVis &&
+                                <div>
+                                    <span onClick={() => setBoardsMenuVis(false)} >
+                                        <BlackScreen />
+                                    </span>
+                                    <AppHeaderMenu closeBoard={() => setBoardsMenuVis(false)} currBoard={currBoard} />
+                                </div>
+                            }
+                        </div>
+
+                        <div className="right-side flex align-center">
+                            {currBoard &&
+                                <div>
+                                    <button className="app-header-menu-btn" onClick={onToggleAppHeaderMenu}>{plusSign}</button>
+                                </div>
+                            }
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className="board-toolbar-section">
-                <BoardToolbar />
+                <div className="board-toolbar-section">
+                    <BoardToolbar />
+                </div>
             </div>
         </nav >
     )

@@ -9,13 +9,11 @@ import { useSelector } from 'react-redux';
 export function MainApp() {
     const theme = useSelector(state => state.stateReducer.theme)
     return (
-        <div className={`main-app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
-            <div className="main-content flex">
+        <div className={`main-app ${theme === 'dark' ? 'dark-theme' : 'light-theme'} flex`}>
                 <SideBar />
                 <Route component={BoardContainer} path="/main/boards/:boardid/:listid?/:cardid?" />
                 <Route component={CardDetails} path="/main/boards/:boardid/:listid?/:cardid?" />
                 <Route component={InboxPage} path="/main/inbox" />
-            </div>
         </div>
     )
 }

@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect} from 'react';
+import { useSelector } from 'react-redux';
 
-export function TaskPreview({ taskId }) {
+export function TableTaskPreview({ taskId }) {
     const cards = useSelector(state => state.cardReducer.cards)
 
-    const loadCurrTask = () => {
+    // const loadCurrTask = () => {
 
-    }
+    // }
 
     useEffect(() => {
         console.log('cards:', cards)
@@ -14,11 +14,11 @@ export function TaskPreview({ taskId }) {
         return () => {
             // component willUnMount
         }
-    }, [])
+    }, [cards])
 
 
     return (
-        <div className="task-preview">
+        <div className="table-task-preview">
 
 
         </div>

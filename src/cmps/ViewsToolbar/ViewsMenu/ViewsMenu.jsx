@@ -16,7 +16,7 @@ export function ViewsMenu({ view, setViewMenu, boardid }) {
 
 
     return (
-        <div className="views-menu">
+        <div className="views-menu menu-shadow">
             <ul>
                 <li onClick={onAddToFavorites}>Add to my favorites</li>
                 <li>Rename</li>

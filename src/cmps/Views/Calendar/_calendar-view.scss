@@ -1,29 +1,24 @@
 .calendar-view {
     height: 100%;
-
+    width: 100%;
     .react-calendar__month-view__days {
         height: 100%;
         display: block;
         gap: 0;
         margin: 0;
         z-index: 19;
+        width: 100%;
     }
     button.react-calendar__tile {
         width: 100%;
         height: 12vh;
+        width: 100vw;
         border: 1px solid #454662;
         position: relative;
         &:hover {
             background-color: #454662;
-            // ::before {
-            //     content: "Add";
-            // }
-            // ::after {
-            //     content: "Add";
-            // }
         }
         abbr {
-            // color: #c1c2df;
             text-decoration: none;
             position: absolute;
             top: 0%;
@@ -31,7 +26,6 @@
         }
     }
     abbr {
-        // color: #fff;
         text-decoration: none;
         font-weight: 400;
     }

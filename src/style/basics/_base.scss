@@ -13,11 +13,14 @@
 
 html {
     line-height: 1.5em;
+    height: 100%;
 }
 
 body {
     background-color: unset;
     margin: 0;
+    height: 100%;
+
 }
 
 h1,
@@ -90,49 +93,51 @@ option {
 .dark-theme {
     background-color: #181b34;
     color: #d5d8df;
-    .btn-add-views,
-    .view-btn,
-    .board-tool,
-    li:not(.inner-side-bar) {
+
+    .light-hover {
         &:hover {
             background-color: rgba(116, 116, 156, 0.472) !important;
         }
     }
 
-    .new-deal button {
+    .board-tool-deal,
+    .arrow-btn {
         &:hover {
             background-color: rgba(84, 84, 102, 0.572) !important;
         }
     }
 
-    .card-preview,
     .hide-div,
-    .add-view-menu {
+    .card-preview {
         background-color: #181b34;
         color: #d5d8df;
     }
 
-    .views-menu {
+    .menu-shadow {
         background-color: #30324e;
+        color: #d5d8df;
+    }
+
+    .card-details-board {
+        -webkit-box-shadow: 4px 8px 31px -11px #000000;
+        box-shadow: 4px 8px 31px -11px #000000;
+        background-color: #181b34;
+        color: #d5d8df;
+        font-weight: 300;
     }
 
     .outer-side-bar {
         border-right: 1px solid rgba(211, 211, 211, 0.438);
     }
-    .board-tool button {
-        color: #fff !important;
-        &:hover {
-            background-color: rgba(51, 51, 61, 0.249) !important;
-            border-radius: 4px;
-        }
-    }
+
+    // .main-content-board-container {
+    //     background-color: #1c1f3b;
+    // }
 
     //SHADOW LINES
-    .mid-line,
-    .app-header-border,
-    .views-section {
-        -webkit-box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, 0.438);
-        box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, 0.438);
+    .shadow-line {
+        -webkit-box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, 0.438) !important;
+        box-shadow: 0px 1px 0px 0px rgba(211, 211, 211, 0.438) !important;
     }
 }
 
@@ -143,16 +148,11 @@ option {
         background-color: #ffffff;
     }
 
-    li:not(.inner-side-bar) {
+    .light-hover {
         color: #323338;
-        &:hover {
-            background-color: rgba(116, 116, 156, 0.159) !important;
+        button {
+            color: #323338;
         }
-    }
-    .btn-add-views,
-    .board-tool button {
-        background-color: #ffffff;
-        color: #323338;
         &:hover {
             background-color: rgba(116, 116, 156, 0.159) !important;
             border-radius: 4px;
@@ -175,23 +175,26 @@ option {
         -webkit-box-shadow: 2px 4px 1px -4px #000000 !important;
         box-shadow: 2px 4px 1px -4px #000000 !important;
     }
-    .views-menu,
-    .add-view-menu {
+    .card-details-board {
+        -webkit-box-shadow: 4px 8px 31px -11px #000000;
+        box-shadow: 4px 8px 31px -11px #000000;
+        background-color: #ffffff;
+        color: #323338 !important;
+        font-weight: 300;
+    }
+    .value {
+        &:hover {
+            background-color: rgba(73, 104, 189, 0.129) !important;
+        }
+    }
+    
+    .menu-shadow {
         background-color: #ffffff;
         color: #323338 !important;
         -webkit-box-shadow: 0px 4px 15px -6px #000000;
         box-shadow: 0px 4px 15px -6px #000000;
         .disabled {
             color: lightgray !important;
-        }
-    }
-
-    .view-btn {
-        button {
-            color: #323338;
-        }
-        &:hover {
-            background-color: rgba(116, 116, 156, 0.159) !important;
         }
     }
     .dots {
@@ -205,9 +208,8 @@ option {
     }
 
     //SHADOW LINES
-    .mid-line,
-    .app-header-border,
-    .views-section {
+
+    .shadow-line {
         -webkit-box-shadow: 0px 1px 0px 0px #cdcfd4;
         box-shadow: 0px 1px 0px 0px #cdcfd4;
     }

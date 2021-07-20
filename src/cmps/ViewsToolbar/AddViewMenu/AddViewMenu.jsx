@@ -27,7 +27,7 @@ export function AddViewMenu({ setAddViewMenu }) {
 
 
     return (
-        <div className="add-view-menu">
+        <div className="add-view-menu menu-shadow ">
             <ul>
                 <li onClick={() => onAddView('Table')} className={`${isViewExsited('Table') ? 'disabled' : ''}`}>
                     <span><FaTable /></span>Table

@@ -23,18 +23,20 @@ export function BoardToolbar() {
         <div className="board-toolbar">
             <ul className="flex align-center">
                 <div className="new-deal flex">
-                    <button className="board-tool">New Deal</button><span className="new-deal-dropdown"><button className="arrow-btn flex justify-center board-tool"><FiChevronDown /></button></span>
+                    <button className="board-tool-deal">New Deal</button><span className="new-deal-dropdown"><button className="arrow-btn flex justify-center board-tool"><FiChevronDown /></button></span>
                 </div>
-                <div className="board-tool">
+                <div className="board-tool light-hover">
                     <button><span className="icon"><AiOutlineSearch /></span>Search</button>
                 </div>
-                <div className="board-tool">
+                <div className="board-tool light-hover">
                     <button><span className="icon">{person}</span>Person</button>
                 </div>
-                <div className="board-tool">
+                <div className="board-tool light-hover">
                     <button><span className="icon"><BiFilterAlt /></span>Filter </button>
                 </div>
             </ul>
+            < hr className="app-header-border shadow-line" />
+
 
         </div>
     )

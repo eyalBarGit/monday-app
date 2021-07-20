@@ -88,12 +88,13 @@ export function Kanban({ boardid }) {
             >
                 {(provided) => {
                     return (
-                        <div ref={boardRef} className="kanban margin-center align-center">
+                        <div ref={boardRef} className="kanban margin-center flex column ">
                             <MainDndArea
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
                             >
                                 <div className="main-content flex ">
+                                  
                                     {currBoard.listOrder.map((listId, idx) => {
                                         return <div key={listId} className="list-section">
                                             <List index={idx}

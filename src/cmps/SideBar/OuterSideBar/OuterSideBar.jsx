@@ -25,7 +25,7 @@ export function OuterSideBar({ setMenu, theme, isMenuWide, setSlideDown, isSlide
         <div className="outer-side-bar"
             onMouseEnter={() => setMenu(true)}
             onMouseLeave={() => setMenu(false)}>
-            <div className={`hide-div ${theme === 'light' ? 'white-div' : ''}`}></div>
+            <div className={`hide-div ${theme === 'light' ? 'white-div' : ''} `}></div>
             <div className={
                 `main-content-outer-side-bar  ${isMenuWide ? 'wide' : ''}`}>
                 <div className={`content-container ${isMenuWide ? 'vis' : ''}`}>
@@ -33,24 +33,24 @@ export function OuterSideBar({ setMenu, theme, isMenuWide, setSlideDown, isSlide
                         <p>Workspace</p>
                         <h2>New Workspace</h2>
                         <ul>
-                            <li>
+                            <li className="light-hover">
                                 <span className="add-symbol"><IoMdAddCircleOutline /></span>Add
                             </li>
-                            <li>
+                            <li className="light-hover">
                                 <span><BiFilterAlt /></span>Filters
                             </li>
-                            <li>
+                            <li className="light-hover">
                                 <span><AiOutlineSearch /></span>Search
                             </li>
                         </ul>
                     </div>
-                    <div className="mid-line margin-center" ></div>
+                    <div className="mid-line margin-center shadow-line" ></div>
                     <div className="outer-menu-bottom-part">
-                        <div className="crm-section flex align-center" onClick={() => setSlideDown(!isSlideOpen)}>
+                        <div className="crm-section flex align-center light-hover" onClick={() => setSlideDown(!isSlideOpen)}>
                             {isSlideOpen ? <IoMdArrowDropdown className="arrow" /> : < IoMdArrowDropright className="arrow" />
                             }
-                            <div className="crm-line flex space-between">
-                                <p> CRM</p>  <span className="menu-btn">
+                            <div className="crm-line flex space-between ">
+                                <p> CRM</p>  <span className="menu-btn ">
                                     <BsThreeDots />  </span>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ export function OuterSideBar({ setMenu, theme, isMenuWide, setSlideDown, isSlide
                             <SlideDown className={'my-dropdown-slidedown flex column align-center'}>
                                 {isSlideOpen && <React.Fragment>
                                     {Object.keys(boards).map((boardId) => (
-                                        <li key={boardId} className="flex space-between  align-center" onClick={
+                                        <li key={boardId} className="flex space-between  align-center light-hover" onClick={
                                             () => history.push(`/main/boards/${boardId}`)}>
                                             {boards[boardId].name} <span className="menu-btn">
                                                 <BsThreeDots />  </span>

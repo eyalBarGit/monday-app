@@ -6,6 +6,7 @@ import { BlackScreen } from '../CardDetails/BlackScreen/BlackScreen'
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { faPencilAlt, } from '@fortawesome/free-solid-svg-icons'
 import { AiOutlineArrowRight } from 'react-icons/ai'
+import { DynamicDetails } from './DynamicDetails/DynamicDetails';
 
 
 export function CardDetails() {
@@ -14,7 +15,7 @@ export function CardDetails() {
     const cardsState = useSelector(state => state.cardReducer.cards)
     const { boardid, cardid, } = useParams();
     const currBoard = boardState.boards[boardid]
-    const [currTable, setCurrTable] = useState(null)
+    // const [currTable, setCurrTable] = useState(null)
     const [currCard, setCurrCard] = useState()
 
 
@@ -39,8 +40,8 @@ export function CardDetails() {
 
     useEffect(() => {
         loadCurrCard()
-        setCurrTable(tableState[currBoard.tableId])
-    }, [currCard, loadCurrCard,currBoard.tableId,tableState])
+        // setCurrTable(tableState[currBoard.tableId])
+    }, [currCard, loadCurrCard, currBoard.tableId, tableState])
 
 
     const onToggleCardDetails = () => {
@@ -97,30 +98,12 @@ export function CardDetails() {
                     <div className="board-related flex align-center">
                         <p>in <AiOutlineArrowRight className="arrow" /> {currBoard.name} board</p>
                     </div>
-                    <div className="left-side-details">
-                        {currTable && Object.keys(currTable.columns).map((key, idx) =>
-                            <div key={idx}>
-                                <p>{key}</p>
-                            </div>)}
-
-                    </div>
-
-
-
-
-
+                        {currCard && Object.keys(currCard).map((key, idx) =>
+                            <React.Fragment key={idx}>
+                                <DynamicDetails property={key} value={currCard[key]} />
+                            </React.Fragment>)}
                 </div>
-
-
-
             </div>
-
-
-
-
-
-
-
         </div>
 
 
