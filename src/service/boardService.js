@@ -9,7 +9,7 @@ function createBoard(boardName) {
     backgroundImg: 'sky',
     navBarTheme: 'bright',
     createdAt: new Date().toLocaleDateString(),
-    views: [{ id: 'X3SsvH4', type: 'Kanban', createdAt: new Date().toLocaleDateString() }]
+    views: [{ id: 'X3SsvH4', type: 'Kanban', createdAt: new Date().toLocaleDateString(), isMenu: false }]
 
 
   }

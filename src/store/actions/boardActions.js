@@ -288,12 +288,43 @@ export function setBoardView(view, boardid) {
     }
 }
 
+export function toggleViewMenu(currViewId, nextViewId, currBoardId) {
+    return async dispatch => {
+        const viewsId = {
+            currViewId,
+            nextViewId,
+            currBoardId
+        }
+        try {
+            dispatch(_toggleViewMenu(viewsId));
+        }
+        catch (err) {
+            throw err
+        }
+    }
+}
+
+
+
 
 export function toggleTheme() {
     return async dispatch => {
 
         try {
             dispatch({ type: 'TOGGLE_THEME' });
+        }
+        catch (err) {
+            throw err
+        }
+    }
+}
+
+
+export function _toggleViewMenu(viewsId) {
+    return async dispatch => {
+
+        try {
+            dispatch({ type: 'TOGGLE_VIEWS_MENU', data: viewsId });
         }
         catch (err) {
             throw err

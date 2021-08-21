@@ -88,7 +88,7 @@ export function Kanban({ boardid }) {
             >
                 {(provided) => {
                     return (
-                        <div ref={boardRef} className="kanban margin-center flex column ">
+                        <div ref={boardRef} className="kanban flex column ">
                             <MainDndArea
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}

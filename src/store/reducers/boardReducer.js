@@ -97,6 +97,28 @@ export default function boardReducer(state = initialState, action) {
                 },
             };
 
+        case 'TOGGLE_VIEWS_MENU':
+            const newViews = [...state.boards[action.data.currBoardId].views]
+            if (action.data.currView) {
+                const currView = newViews.filter((view) => view.id === action.data.currViewId)
+                currView.isMenu = false
+            } else if (action.data.nextView) {
+                const nextView = newViews.filter((view) => view.id === action.data.nextViewId)
+                nextView.isMenu = true
+            }
+
+
+            return {
+                ...state,
+                boards: {
+                    ...state.boards,
+                    [action.data.currBoardId]: {
+                        ...state.boards[[action.data.currBoardId]],
+                        views: newViews
+                    },
+                },
+            };
+
 
 
         case 'MOVE_LIST':

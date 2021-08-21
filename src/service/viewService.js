@@ -6,6 +6,7 @@ function createView(viewType) {
         type: viewType,
         createdAt: new Date().toLocaleDateString(),
         isDefault: false,
+        isMenu: false
     }
 }
 
