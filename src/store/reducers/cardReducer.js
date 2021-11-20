@@ -2,7 +2,7 @@ import UTILS from '../../service/utils'
 import cards from '../../data/cards.json'
 var initialState = { cards: UTILS.loadFromStorage('cards') || cards }
 
-export default function cardReducer (state = initialState, action) {
+export default function cardReducer(state = initialState, action) {
     switch (action.type) {
 
         case 'CREATE_CARD':
@@ -126,7 +126,7 @@ export default function cardReducer (state = initialState, action) {
             };
 
         case 'TOGGLE_CHECK_ITEM':
-            const isItemChecked = state.cards[action.data.currCard.id].checklist[action.data.currCheckList.id].list[action.data.currItem.id].isChecked
+            var isItemChecked = state.cards[action.data.currCard.id].checklist[action.data.currCheckList.id].list[action.data.currItem.id].isChecked
             return {
                 ...state,
                 cards: {
@@ -199,8 +199,7 @@ export default function cardReducer (state = initialState, action) {
                 },
             };
         case 'REMOVE_CHECKLIST_ITEM':
-            const newChecklistToSave = state.cards[action.data.currCard.id].checklist
-            [action.data.currCheckList.id]
+            var newChecklistToSave = state.cards[action.data.currCard.id].checklist[action.data.currCheckList.id]
             delete newChecklistToSave.list[action.data.itemToRemove.id]
 
             return {
@@ -220,7 +219,7 @@ export default function cardReducer (state = initialState, action) {
             };
 
         case 'REMOVE_CHECKLIST':
-            const newChecklist = state.cards[action.data.currCard.id].checklist
+            var newChecklist = state.cards[action.data.currCard.id].checklist
             delete newChecklist[action.data.checkListToRemove.id]
             return {
                 ...state,

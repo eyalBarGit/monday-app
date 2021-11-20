@@ -8,7 +8,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
 import { ChangeListTitle } from '../ChangeListTitle/ChangeListTitle'
 import { MoveList } from '../ListMenu/MoveList/MoveList'
-import {  useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 
 
@@ -17,24 +17,24 @@ export function List({ listId, currBoard, index, }) {
     const [isAddCardShown, setAddCard] = useState(false)
     const [isEditTitle, setIsEditTitle] = useState(false)
     const [isMoveListVisible, setMoveList] = useState(false)
-    const [currList, setCurrList] = useState(null)
 
     const listsState = useSelector(state => state.listReducer.lists)
-    const cardsState = useSelector(state => state.cardReducer.cards)
+    const [currList] = useState(listsState[listId])
+    // const cardsState = useSelector(state => state.cardReducer.cards)
 
     const plus = <FontAwesomeIcon icon={faPlus} />
 
 
 
-    const loadCurrList = useCallback(() => {
-        const currList = listsState[listId]
-        setCurrList(currList)
-    }, [listsState, listId])
+    // const loadCurrList = useCallback(() => {
+    //     const currList = listsState[listId]
+    //     setCurrList(currList)
+    // }, [listsState, listId])
 
 
-    useEffect(() => {
-        loadCurrList()
-    }, [cardsState, listsState, loadCurrList])
+    // useEffect(() => {
+    //     loadCurrList()
+    // }, [cardsState, listsState, loadCurrList])
 
 
 

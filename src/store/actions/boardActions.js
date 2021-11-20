@@ -9,6 +9,7 @@ export function addNewListId(listId, currBoard) {
             dispatch(_addNewListId(data));
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -21,6 +22,7 @@ export function addCopiedListId(listId, currBoard) {
             dispatch(_addCopiedListId(data));
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -36,6 +38,7 @@ export function removeListId(currBoard, listId) {
 
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -52,6 +55,8 @@ export function moveList(moveFromBoard, listToMove, moveToBoardId) {
             dispatch(_moveList(data));
         }
         catch (err) {
+            console.log('error:', err)
+
             throw err
         }
     }
@@ -68,6 +73,8 @@ export function dragList(source, destination, draggableId, currBoard) {
             dispatch(_dragList(data));
         }
         catch (err) {
+            console.log('error:', err)
+
             throw err
         }
     }
@@ -85,6 +92,8 @@ export function createList(currBoard, listName) {
 
         }
         catch (err) {
+            console.log('error:', err)
+
             throw err
         }
     }
@@ -102,6 +111,8 @@ export function createBoard(boardName = "New Board") {
             dispatch(_createBoard(data))
         }
         catch (err) {
+            console.log('error:', err)
+
             throw err
         }
     }
@@ -113,6 +124,8 @@ export function deleteBoard(boardToDelete) {
             dispatch(_deleteBoard(boardToDelete))
         }
         catch (err) {
+            console.log('error:', err)
+
             throw err
         }
     }
@@ -128,6 +141,8 @@ export function changeBoardName(currBoard, boardName) {
             dispatch(_changeBoardName(data))
         }
         catch (err) {
+            console.log('error:', err)
+
             throw err
         }
     }
@@ -139,6 +154,8 @@ export function favoriteBoard(currBoard) {
             dispatch(_favoriteBoard(currBoard))
         }
         catch (err) {
+            console.log('error:', err)
+
             throw err
         }
     }
@@ -150,13 +167,14 @@ export function removeSavedBoard(currBoard) {
             dispatch(_removeSavedBoard(currBoard))
         }
         catch (err) {
+            console.log('error:', err)
+
             throw err
         }
     }
 }
 
 export function changeBoardBackground(currBoard, bgName) {
-    console.log('in background')
     return async dispatch => {
         try {
             const data = {
@@ -167,6 +185,7 @@ export function changeBoardBackground(currBoard, bgName) {
 
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -179,6 +198,7 @@ export function toggleBgSide() {
 
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -191,24 +211,27 @@ export function setActiveBoard(boardId) {
 
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
 }
-
-
-
 export function saveToStorage(key, value) {
-    return async dispatch => {
+    return () => {
         try {
-            await service.saveToStorage(key, value)
+            service.saveToStorage(key, value)
 
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
 }
+
+
+
+
 export function disableStorageReset() {
     return async dispatch => {
         try {
@@ -217,6 +240,7 @@ export function disableStorageReset() {
 
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -229,6 +253,7 @@ export function toggleStorageReset() {
 
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -243,6 +268,7 @@ export function addView(viewType, boardid) {
             dispatch(_addView(newView));
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -256,6 +282,7 @@ export function deleteView(viewId, boardid) {
             dispatch(_deleteView(viewToDelete));
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -269,6 +296,7 @@ export function addToFavorites(viewId, boardid) {
             dispatch(_addToFavorites(viewToDelete));
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -283,6 +311,7 @@ export function setBoardView(view, boardid) {
             dispatch(_setBoardView(viewToSet));
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -299,6 +328,7 @@ export function toggleViewMenu(currViewId, nextViewId, currBoardId) {
             dispatch(_toggleViewMenu(viewsId));
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -309,11 +339,11 @@ export function toggleViewMenu(currViewId, nextViewId, currBoardId) {
 
 export function toggleTheme() {
     return async dispatch => {
-
         try {
             dispatch({ type: 'TOGGLE_THEME' });
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }
@@ -327,6 +357,7 @@ export function _toggleViewMenu(viewsId) {
             dispatch({ type: 'TOGGLE_VIEWS_MENU', data: viewsId });
         }
         catch (err) {
+            console.log('error:', err)
             throw err
         }
     }

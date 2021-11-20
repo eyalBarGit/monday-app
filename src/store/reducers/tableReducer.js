@@ -8,25 +8,49 @@ var initialState = {
 
 export default function groupReducer(state = initialState, action) {
     switch (action.type) {
-        // case 'UPDATE_LIST':
-        //     return {
-        //         ...state,
-        //         tables: {
-        //             ...state.tables,
-        //             [action.data.updatedList.id]: action.data.updatedList
-        //         }
-        //     };
-        // case 'UPDATE_LISTS':
-        //     return {
-        //         ...state,
-        //         tables: {
-        //             ...state.tables,
-        //             [action.data.newStartList.id]: action.data.newStartList,
-        //             [action.data.newFinishList.id]: action.data.newFinishList,
-        //         }
-        //     };
+        case 'UPDATE_TABLE':
+            return {
+                ...state,
+                tables: {
+                    ...state.tables,
+                    [action.data.boardId]: {
+                        ...state.tables[action.data.boardId],
+                        groups: {
+                            ...state.tables[action.data.boardId].groups,
+                            [action.data.updatedTable.id]: action.data.updatedTable
+                        }
+                    },
+                }
+            };
+        case 'UPDATE_TABLES':
+            return {
+                ...state,
+                tables: {
+                    ...state.tables,
+                    [action.data.currBoard.id]: {
+                        ...state.tables[action.data.currBoard.id],
+                        groups: {
+                            ...state.tables[action.data.currBoard.id].groups,
+                            [action.data.newStartTable.id]: action.data.newStartTable,
+                            [action.data.newFinishTable.id]: action.data.newFinishTable,
+                        }
+                    }
+                }
+            };
+        case 'UPDATE_TABLES_ORDER':
+            // console.log('action:', action.data)
+            return {
+                ...state,
+                tables: {
+                    ...state.tables,
+                    [action.data.boardid]: {
+                        ...state.tables[action.data.boardid],
+                        groupsOrder: action.data.newGroupsOrder
+                    }
+                }
+            };
 
-        // case 'CREATE_LIST':
+        // case 'CREATE_TABLE':
         //     return {
         //         ...state,
         //         tables: {
@@ -40,48 +64,48 @@ export default function groupReducer(state = initialState, action) {
         //         ...state,
         //         tables: {
         //             ...state.tables,
-        //             [action.data.currList.id]: {
-        //                 ...state.tables[action.data.currList.id],
+        //             [action.data.currTable.id]: {
+        //                 ...state.tables[action.data.currTable.id],
         //                 cardIds: [
-        //                     ...state.tables[action.data.currList.id].cardIds, action.data.card.id
+        //                     ...state.tables[action.data.currTable.id].cardIds, action.data.card.id
         //                 ]
         //             }
         //         }
         //     };
 
-        // case 'DELETE_LIST':
+        // case 'DELETE_TABLE':
         //     console.log('action.data:', action.data)
-        //     var newLists = state.tables
-        //     delete newLists[action.data.currList.id]
+        //     var newTables = state.tables
+        //     delete newTables[action.data.currTable.id]
         //     return {
         //         ...state,
         //         tables: {
-        //             ...newLists
+        //             ...newTables
         //         },
         //     };
-        // case 'COPY_LIST':
-        //     console.log('action.data(LIST-REDUCER):', action.data)
+        // case 'COPY_TABLE':
+        //     console.log('action.data(TABLE-REDUCER):', action.data)
         //     return {
         //         ...state,
         //         tables: {
         //             ...state.tables,
-        //             [action.data.copiedList.id]: {
-        //                 ...action.data.copiedList
+        //             [action.data.copiedTable.id]: {
+        //                 ...action.data.copiedTable
         //             }
         //         },
         //     };
 
-        // case 'GET_LIST_STATE':
+        // case 'GET_TABLE_STATE':
         //     return {
         //         ...state,
         //     };
-        // case 'CHANGE_LIST_NANE':
+        // case 'CHANGE_TABLE_NANE':
         //     return {
         //         ...state,
         //         tables: {
         //             ...state.tables,
-        //             [action.data.currList.id]: {
-        //                 ...action.data.currList
+        //             [action.data.currTable.id]: {
+        //                 ...action.data.currTable
         //             }
         //         },
         //     };
@@ -89,14 +113,14 @@ export default function groupReducer(state = initialState, action) {
 
 
         // case 'DELETE_CARD':
-        //     var idx = state.lists[action.data.currList.id].cardIds.findIndex((cardId) => cardId === action.data.cardId)
-        //     var newListOrder = state.lists[action.data.currList.id].cardIds
-        //     newListOrder.splice(idx, 1)
+        //     var idx = state.lists[action.data.currTable.id].cardIds.findIndex((cardId) => cardId === action.data.cardId)
+        //     var newTableOrder = state.lists[action.data.currTable.id].cardIds
+        //     newTableOrder.splice(idx, 1)
         //     return {
         //         ...state,
         //         lists: {
         //             ...state.lists,
-        //             [action.data.currList.id]: { ...state.lists[action.data.currList.id], cardIds: [...newListOrder] }
+        //             [action.data.currTable.id]: { ...state.lists[action.data.currTable.id], cardIds: [...newTableOrder] }
         //         },
 
         //     }
@@ -105,13 +129,13 @@ export default function groupReducer(state = initialState, action) {
         //         ...state,
         //         lists: {
         //             ...state.lists,
-        //             [action.data.currList.id]: {
-        //                 ...state.lists[action.data.currList.id],
-        //                 cardIds: state.lists[action.data.currList.id].cardIds.filter(cardId => cardId !== action.data.currCard.id)
+        //             [action.data.currTable.id]: {
+        //                 ...state.lists[action.data.currTable.id],
+        //                 cardIds: state.lists[action.data.currTable.id].cardIds.filter(cardId => cardId !== action.data.currCard.id)
         //             },
-        //             [action.data.moveToListID]: {
-        //                 ...state.lists[action.data.moveToListID],
-        //                 cardIds: [...state.lists[action.data.moveToListID].cardIds, action.data.currCard.id]
+        //             [action.data.moveToTableID]: {
+        //                 ...state.lists[action.data.moveToTableID],
+        //                 cardIds: [...state.lists[action.data.moveToTableID].cardIds, action.data.currCard.id]
         //             }
         //         },
         //     };

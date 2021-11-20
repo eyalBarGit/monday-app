@@ -77,7 +77,7 @@ export default function boardReducer(state = initialState, action) {
                 },
             };
         case 'DELETE_BOARD':
-            const newBoards = state.boards
+            var newBoards = state.boards
             delete newBoards[action.data.id]
             return {
                 ...state,
@@ -98,7 +98,7 @@ export default function boardReducer(state = initialState, action) {
             };
 
         case 'TOGGLE_VIEWS_MENU':
-            const newViews = [...state.boards[action.data.currBoardId].views]
+            var newViews = [...state.boards[action.data.currBoardId].views]
             if (action.data.currView) {
                 const currView = newViews.filter((view) => view.id === action.data.currViewId)
                 currView.isMenu = false
@@ -186,9 +186,9 @@ export default function boardReducer(state = initialState, action) {
             };
 
         case 'REMOVE_SAVED_BOARD':
-            const index = state.favBoards.findIndex((boardId) => boardId === action.boardToRemove.id)
+            var index = state.favBoards.findIndex((boardId) => boardId === action.boardToRemove.id)
             state.favBoards.splice(index, 1)
-            const newFavBoards = state.favBoards
+            var newFavBoards = state.favBoards
             return {
                 ...state,
                 boards: {

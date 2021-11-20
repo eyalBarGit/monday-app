@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 // import {  useSelector } from 'react-redux';
 import { Kanban } from '../../cmps/Views/Kanban/Kanban';
 import { AppHeader } from '../../cmps/AppHeader/AppHeader';
-import { Table } from '../../cmps/Views/Table/Table';
+import { TableView } from '../../cmps/Views/TableView/TableView';
 import { useState } from 'react';
 import { useParams } from 'react-router';
 import { CalendarView } from '../../cmps/Views/Calendar/CalendarView'
@@ -16,7 +16,6 @@ export function BoardContainer() {
     const state = useSelector(state => state.stateReducer)
 
     const { boardid } = useParams()
-    const [view, onSetView] = useState(boards[boardid].currView)
     const activeBoard = boards[boardid]
     const [currBoard, setBoard] = useState(boards[boardid])
 
@@ -29,32 +28,28 @@ export function BoardContainer() {
     useEffect(() => { dispatch(saveToStorage('state', state)) }, [state, dispatch])
 
 
-
     useEffect(() => {
         setBoard(activeBoard)
-        onSetView(currBoard.currView)
-    }, [boardid, activeBoard, currBoard.currView], onSetView)
+    }, [boardid, activeBoard, currBoard.currView])
 
 
     const setView = (view) => {
         dispatch(setBoardView(view, boardid))
-        onSetView(view)
     }
 
 
     return (
         <div className="board-container">
             <AppHeader setView={setView} />
-            {/* {view === 'Kanban' && <hr className="app-header-border shadow-line" />} */}
 
             <div className="main-content-board-container flex column">
-                {view === 'Kanban' &&
+                {currBoard.currView === 'Kanban' &&
                     <Kanban boardid={boardid} />
                 }
-                {view === 'Table' &&
-                    <Table boardid={boardid} />
+                {currBoard.currView === 'Table' &&
+                    <TableView boardid={boardid} />
                 }
-                {view === 'Calendar' &&
+                {currBoard.currView === 'Calendar' &&
                     <CalendarView boardid={boardid} />
                 }
             </div>

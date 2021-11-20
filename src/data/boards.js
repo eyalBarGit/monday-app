@@ -1,4 +1,4 @@
-module.exports = {
+const boards = {
     '14325143': {
         id: '14325143',
         name: 'Sales Pipeline',
@@ -35,7 +35,8 @@ module.exports = {
         tableId: 'b03e36l'
 
     },
-};
+}
+export default boards;
 
 
 

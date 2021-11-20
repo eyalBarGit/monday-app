@@ -9,6 +9,7 @@ import { FaTable, FaWpforms } from 'react-icons/fa'
 import { AiOutlineCalendar, AiOutlinePieChart } from 'react-icons/ai'
 import { useParams } from 'react-router';
 import { toggleViewMenu } from '../../store/actions/boardActions'
+import PropTypes from 'prop-types'; // ES6
 
 const plusSign = <FontAwesomeIcon icon={faPlus} />
 
@@ -37,8 +38,8 @@ export function ViewsToolbar({ setView }) {
 
     useEffect(() => {
         setCurrView(boards[boardid].currView)
-
     }, [currView, boardid, boards])
+
 
     const icon = (view) => {
         switch (view) {
@@ -79,4 +80,9 @@ export function ViewsToolbar({ setView }) {
 
 
 
+}
+
+
+ViewsToolbar.propTypes = {
+    setView: PropTypes.func.isRequired
 }

@@ -14,7 +14,7 @@ export function Kanban({ boardid }) {
     // const { boardid } = useParams();
     const boards = useSelector(boards => boards.boardReducer)
     const listsState = useSelector(state => state.listReducer.lists)
-    const listOrder = useSelector(boards => boards.boardReducer.boards[boardid].listOrder)
+    // const listOrder = useSelector(boards => boards.boardReducer.boards[boardid].listOrder)
 
     const { isCardDetailShown, isBgSideOpen } = boards
     // const [isAddListVisible, setAddList] = useState(false)
@@ -27,15 +27,15 @@ export function Kanban({ boardid }) {
     // useEffect(() => { dispatch(saveToStorage('lists', listsState)) }, [listsState, dispatch])
 
 
-    const loadCurrBoard = useCallback(() => {
-        let currentBoard = boards.boards[boardid]
-        setCurrBoard(currentBoard)
-    }, [boardid, boards.boards])
+    // const loadCurrBoard = useCallback(() => {
+    //     let currentBoard = boards.boards[boardid]
+    //     setCurrBoard(currentBoard)
+    // }, [boardid, boards.boards])
 
 
-    useEffect(() => {
-        loadCurrBoard()
-    }, [listOrder, loadCurrBoard])
+    // useEffect(() => {
+    //     loadCurrBoard()
+    // }, [listOrder, loadCurrBoard])
 
 
 
