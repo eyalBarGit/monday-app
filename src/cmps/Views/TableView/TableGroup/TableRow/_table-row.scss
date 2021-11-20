@@ -1,0 +1,11 @@
+.table-row {
+    height: 50px;
+    border: 1px solid rgb(235, 233, 233);
+    &:not(:first-child) {
+        margin-top: 5px;
+    }
+    .row-title {
+        flex-grow: 10;
+        min-width: 200px;
+    }
+}

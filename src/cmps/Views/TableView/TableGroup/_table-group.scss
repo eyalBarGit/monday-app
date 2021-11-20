@@ -1,0 +1,7 @@
+.table-group {
+    height: 250px;
+    overflow-x: hidden;
+    margin-bottom: 50px;
+    &:not(:first-child){
+    }
+}
